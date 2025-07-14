@@ -1,0 +1,64 @@
+# depslib dependency file v1.0
+1752306729 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\eltolas.cpp
+	"eltolas.h"
+
+1752334822 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\eltolas.h
+
+1752475024 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekallas.cpp
+	"jatekallas.h"
+	"tabla.h"
+	"poz.h"
+	"lepes.h"
+
+1752476146 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekallas.h
+	"babu.h"
+	"tabla.h"
+	"szin.h"
+	"jatekos.h"
+	"eltolas.h"
+	"lepes.h"
+	"poz.h"
+
+1752476701 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\babu.h
+	<iostream>
+	<vector>
+	"szin.h"
+	"poz.h"
+	"lepes.h"
+
+1752327623 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\szin.h
+
+1752475987 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\tabla.h
+	<iostream>
+	<vector>
+
+1752476577 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\poz.h
+	"szin.h"
+	"eltolas.h"
+
+1752476177 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekos.h
+
+1752476195 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.h
+
+1752334931 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.cpp
+	"lepes.h"
+	"tabla.h"
+
+1752334967 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\poz.cpp
+	"poz.h"
+	"eltolas.h"
+
+1752475485 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\babu.cpp
+	<iostream>
+	<vector>
+	"babu.h"
+	"eltolas.h"
+	"poz.h"
+	"lepes.h"
+	"szin.h"
+	"tabla.h"
+
+1752335096 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\tabla.cpp
+	"tabla.h"
+	"babu.h"
+

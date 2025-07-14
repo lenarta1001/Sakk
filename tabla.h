@@ -4,9 +4,6 @@
 #include <iostream>
 #include <vector>
 
-#include "poz.h"
-#include "babu.h"
-
 class Babu;
 class Poz;
 

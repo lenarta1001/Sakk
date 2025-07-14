@@ -1,5 +1,6 @@
 #include "tabla.h"
 #include "babu.h"
+#include "poz.h"
 
 Tabla::Tabla() {
     for (int i = 0; i < 8; i++)

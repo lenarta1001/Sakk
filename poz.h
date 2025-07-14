@@ -1,9 +1,9 @@
 #ifndef POZ_H
 #define POZ_H
 
-#include "babu.h"
-#include "eltolas.h"
+
 #include "szin.h"
+#include "eltolas.h"
 
 class Poz {
     unsigned sor;

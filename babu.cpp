@@ -3,11 +3,10 @@
 
 #include "babu.h"
 #include "eltolas.h"
-#include "tabla.h"
 #include "poz.h"
 #include "lepes.h"
 #include "szin.h"
-
+#include "tabla.h"
 
 Lepesek Paraszt::lepesek(const Poz &kezdo, Tabla &tabla) {
     Lepesek elerhetok;
@@ -108,7 +107,9 @@ Lepesek Huszar::lepesek(const Poz& kezdo, Tabla& tabla) {
             }
         }
     }
- }
+    return elerhetok;
+}
+
 Lepesek Kiraly::lepesek(const Poz& kezdo, Tabla& tabla) {
     Lepesek elerhetok;
     Eltolas iranyok[8] = {Eltolas::eszak, Eltolas::eszakkelet, Eltolas::kelet, Eltolas::delkelet, Eltolas::del, Eltolas::delnyugat, Eltolas::nyugat, Eltolas::eszaknyugat};
@@ -117,6 +118,8 @@ Lepesek Kiraly::lepesek(const Poz& kezdo, Tabla& tabla) {
         if (tabla.benne_van(veg) && (tabla.ures(veg) || tabla[veg]->get_szin() != szin))
             elerhetok.push_back(new NormalLepes(kezdo, veg));
     }
+
+    return elerhetok;
 }
 
 int main() {

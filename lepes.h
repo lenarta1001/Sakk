@@ -1,8 +1,8 @@
 #ifndef LEPES_H
 #define LEPES_H
 
-#include "poz.h"
 
+class Poz;
 class Tabla;
 
 class Lepes {
@@ -12,7 +12,7 @@ protected:
 public:
     Lepes(const Poz& k, const Poz& v) : kezdo(k), veg(v) {}
     virtual Lepes* copy() = 0;
-    virtual void elvegez(Tabla& t);
+    virtual void elvegez(Tabla& t) = 0;
     virtual ~Lepes() {}
 };
 

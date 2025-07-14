@@ -5,10 +5,10 @@
 #include <vector>
 
 #include "szin.h"
+#include "poz.h"
+#include "lepes.h"
 
 class Tabla;
-class Lepesek;
-class Poz;
 
 class Babu {
 protected:

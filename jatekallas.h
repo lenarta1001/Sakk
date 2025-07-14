@@ -5,9 +5,9 @@
 #include "tabla.h"
 #include "szin.h"
 #include "jatekos.h"
+#include "eltolas.h"
 #include "lepes.h"
-
-class Poz;
+#include "poz.h"
 
 
 class JatekAllas {
