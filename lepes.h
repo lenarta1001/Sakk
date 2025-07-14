@@ -12,6 +12,7 @@ protected:
 public:
     Lepes(const Poz& k, const Poz& v) : kezdo(k), veg(v) {}
     virtual Lepes* copy() = 0;
+    virtual void elvegez(Tabla& t);
     virtual ~Lepes() {}
 };
 

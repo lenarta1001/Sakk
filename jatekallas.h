@@ -4,13 +4,19 @@
 #include "babu.h"
 #include "tabla.h"
 #include "szin.h"
+#include "jatekos.h"
+#include "lepes.h"
+
+class Poz;
+
 
 class JatekAllas {
-    Szin akt_jatekos;
+    Jatekos akt_jatekos;
     Tabla tabla;
 public:
-    JatekAllas(Szin j, Tabla t) : akt_jatekos(j), tabla(t) {}
-
+    JatekAllas(Jatekos j, const Tabla& t) : akt_jatekos(j), tabla(t) {}
+    Lepesek ervenyes_lepesek(const Poz& p);
+    void lep(Lepes* l); 
 };
 
 #endif // JATEKALLAS_H
