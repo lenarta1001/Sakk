@@ -148,4 +148,5 @@ CMakeFiles/Sakk.dir/lepes.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/istream \
  C:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
- C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.h
+ C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.h \
+ C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekos.h

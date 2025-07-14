@@ -8,13 +8,13 @@
 class Tabla;
 
 class Lepes {
-protected:
+public:
     Poz kezdo;
     Poz veg;
-public:
     Lepes(const Poz& k, const Poz& v) : kezdo(k), veg(v) {}
     virtual Lepes* copy() = 0;
-    virtual void elvegez(Tabla& t) = 0;
+    virtual void elvegez(Tabla& t) const = 0;
+    virtual bool ervenyes(Tabla& tabla) const;
     virtual ~Lepes() {}
 };
 
@@ -22,7 +22,7 @@ class NormalLepes : public Lepes {
 public:
     NormalLepes(const Poz& k, const Poz& v) : Lepes(k, v) {}
     Lepes* copy() { return new NormalLepes(kezdo, veg); }
-    void elvegez(Tabla& t);
+    void elvegez(Tabla& t) const;
     ~NormalLepes() {}
 };
 
@@ -39,6 +39,7 @@ public:
             delete (*this)[i];
         }
     }
+
 };
 
 #endif // LEPES_H

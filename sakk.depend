@@ -2,7 +2,7 @@
 1752477511 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\eltolas.cpp
 	"eltolas.h"
 
-1752334822 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\eltolas.h
+1752487585 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\eltolas.h
 
 1752477417 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekallas.cpp
 	"jatekallas.h"
@@ -11,11 +11,11 @@
 	"lepes.h"
 	"babu.h"
 
-1752477267 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekallas.h
+1752494266 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekallas.h
 	"tabla.h"
 	"jatekos.h"
 
-1752476701 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\babu.h
+1752504941 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\babu.h
 	<iostream>
 	<vector>
 	"szin.h"
@@ -24,7 +24,7 @@
 
 1752327623 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\szin.h
 
-1752475987 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\tabla.h
+1752504129 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\tabla.h
 	<iostream>
 	<vector>
 
@@ -32,23 +32,24 @@
 	"szin.h"
 	"eltolas.h"
 
-1752477293 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekos.h
+1752504574 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekos.h
 	"szin.h"
 
-1752478479 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.h
+1752503465 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.h
 	<vector>
 	"poz.h"
 
-1752477437 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.cpp
+1752503472 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.cpp
 	"lepes.h"
 	"tabla.h"
 	"babu.h"
+	"jatekos.h"
 
 1752334967 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\poz.cpp
 	"poz.h"
 	"eltolas.h"
 
-1752475485 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\babu.cpp
+1752504515 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\babu.cpp
 	<iostream>
 	<vector>
 	"babu.h"
@@ -58,8 +59,9 @@
 	"szin.h"
 	"tabla.h"
 
-1752476777 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\tabla.cpp
+1752504370 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\tabla.cpp
 	"tabla.h"
 	"babu.h"
 	"poz.h"
+	"jatekos.h"
 

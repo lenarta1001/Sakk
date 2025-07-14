@@ -11,7 +11,7 @@ struct Eltolas {
     static Eltolas delkelet;
     static Eltolas delnyugat;
     int dsor, doszlop;
-    Eltolas(int ds, int dsz) : dsor(ds), doszlop(dsz) {}
+    Eltolas(int ds = 0, int dsz = 0) : dsor(ds), doszlop(dsz) {}
     Eltolas operator*(double c) const;
     Eltolas operator+(const Eltolas& e) const;
 

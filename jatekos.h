@@ -6,7 +6,7 @@
 struct Jatekos {
     Szin szin;
     Jatekos(Szin sz) : szin(sz) {}
-    Jatekos ellenfel() { return szin == Szin::feher ? Jatekos(Szin::fekete) : Jatekos(Szin::feher); } 
+    Jatekos ellenfel() const { return szin == Szin::feher ? Jatekos(Szin::fekete) : Jatekos(Szin::feher); }
 };
 
 #endif // JATEKOS_H

@@ -323,6 +323,7 @@ CMakeFiles/Sakk.dir/jatekallas.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andr
 CMakeFiles/Sakk.dir/lepes.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.cpp \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.h \
+  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekos.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szin.h \
@@ -485,6 +486,7 @@ CMakeFiles/Sakk.dir/poz.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/
 CMakeFiles/Sakk.dir/tabla.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.cpp \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.h \
+  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekos.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szin.h \

@@ -15,7 +15,8 @@ class JatekAllas {
 public:
     JatekAllas(Jatekos j, const Tabla& t) : akt_jatekos(j), tabla(t) {}
     Lepesek ervenyes_lepesek(const Poz& p);
-    void lep(Lepes* l); 
+    void lep(Lepes* l);
+    
 };
 
 #endif // JATEKALLAS_H

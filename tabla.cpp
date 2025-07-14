@@ -1,8 +1,9 @@
 #include "tabla.h"
 #include "babu.h"
 #include "poz.h"
+#include "jatekos.h"
 
-Tabla::Tabla() {
+Tabla::Tabla() : tabla(8, std::vector<Babu*>(8, 0))  {
     for (int i = 0; i < 8; i++)
         for (int j = 0; j < 8; j++)
             tabla[i][j] = nullptr;
@@ -17,6 +18,11 @@ Tabla::~Tabla() {
 Babu*& Tabla::operator[](const Poz& p) {
     return tabla[p.get_sor()][p.get_oszlop()];
 }
+
+Babu* Tabla::operator[](const Poz& p) const {
+    return tabla[p.get_sor()][p.get_oszlop()];
+}
+
 
 void Tabla::init() {
     tabla[0][0] = new Bastya(fekete);
@@ -49,4 +55,44 @@ bool Tabla::ures(const Poz& p) const {
 
 bool Tabla::benne_van(const Poz& p) const {
     return p.get_sor() >= 0 && p.get_sor() < 8 &&  p.get_oszlop() >= 0 && p.get_oszlop() < 8;
+}
+
+std::vector<Poz> Tabla::babuk_pozicioja() const {
+    std::vector<Poz> poziciok;
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            Poz p = Poz(i, j);
+            if (!ures(p))
+                poziciok.push_back(p);
+        }
+    }
+    return poziciok;
+}
+
+std::vector<Poz> Tabla::ellenseges_babuk_pozicioja(const Jatekos& jatekos) const {
+    std::vector<Poz> poziciok;
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            Poz p = Poz(i, j);
+            if (!ures(p) && operator[](p)->get_szin() != jatekos.szin)
+                poziciok.push_back(p);
+        }
+    }
+    return poziciok;
+}
+
+bool Tabla::sakkban_van(const Jatekos &j) const {
+    std::vector<Poz> ellenseges_poz = ellenseges_babuk_pozicioja(j.ellenfel());
+    for (auto poz : ellenseges_poz) {
+        if(operator[](poz)->uti_a_kiralyt(poz, *this))
+            return true;
+    }
+    return false;
+}
+
+Tabla::Tabla(const Tabla& tabla) {
+    std::vector<Poz> poziciok = tabla.babuk_pozicioja();
+    for (auto poz : poziciok) {
+        this->tabla[poz.get_sor()][poz.get_oszlop()] = tabla[poz]->copy();
+    }
 }
