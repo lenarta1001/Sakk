@@ -50,5 +50,7 @@
         "xtr1common": "cpp",
         "xutility": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "cmake.generator": "Ninja",
+    "cmake.sourceDirectory": "${workspaceFolder}"
 }

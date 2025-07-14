@@ -1,0 +1,3 @@
+C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles/Sakk.dir
+C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles/edit_cache.dir
+C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles/rebuild_cache.dir

@@ -1,13 +1,12 @@
 #ifndef JATEKALLAS_H
 #define JATEKALLAS_H
 
-#include "babu.h"
 #include "tabla.h"
-#include "szin.h"
 #include "jatekos.h"
-#include "eltolas.h"
-#include "lepes.h"
-#include "poz.h"
+
+class Lepes;
+class Lepesek;
+class Poz;
 
 
 class JatekAllas {

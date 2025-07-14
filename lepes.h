@@ -1,8 +1,10 @@
 #ifndef LEPES_H
 #define LEPES_H
 
+#include <vector>
+#include "poz.h"
 
-class Poz;
+
 class Tabla;
 
 class Lepes {
@@ -21,6 +23,7 @@ public:
     NormalLepes(const Poz& k, const Poz& v) : Lepes(k, v) {}
     Lepes* copy() { return new NormalLepes(kezdo, veg); }
     void elvegez(Tabla& t);
+    ~NormalLepes() {}
 };
 
 class Lepesek : public std::vector<Lepes*> {
@@ -28,7 +31,7 @@ public:
     Lepesek(size_t db = 0) : std::vector<Lepes*>(db) {}
     Lepesek(const Lepesek& l) {
         for (size_t i = 0; i < l.size(); i++) {
-
+            push_back(l[i]->copy());
         }
     }
     ~Lepesek() {

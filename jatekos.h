@@ -1,7 +1,7 @@
 #ifndef JATEKOS_H
 #define JATEKOS_H
 
-enum Szin;
+#include "szin.h"
 
 struct Jatekos {
     Szin szin;

@@ -2,6 +2,7 @@
 #include "tabla.h"
 #include "poz.h"
 #include "lepes.h"
+#include "babu.h"
 
 Lepesek JatekAllas::ervenyes_lepesek(const Poz& p) {
     if (!tabla.benne_van(p) || tabla[p]->get_szin() != akt_jatekos.szin) {
