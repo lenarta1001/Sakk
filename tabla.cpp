@@ -69,12 +69,12 @@ std::vector<Poz> Tabla::babuk_pozicioja() const {
     return poziciok;
 }
 
-std::vector<Poz> Tabla::ellenseges_babuk_pozicioja(const Jatekos& jatekos) const {
+std::vector<Poz> Tabla::egyszinu_babuk_pozicioja(const Jatekos& jatekos) const {
     std::vector<Poz> poziciok;
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             Poz p = Poz(i, j);
-            if (!ures(p) && operator[](p)->get_szin() != jatekos.szin)
+            if (!ures(p) && operator[](p)->get_szin() == jatekos.szin)
                 poziciok.push_back(p);
         }
     }
@@ -82,7 +82,7 @@ std::vector<Poz> Tabla::ellenseges_babuk_pozicioja(const Jatekos& jatekos) const
 }
 
 bool Tabla::sakkban_van(const Jatekos &j) const {
-    std::vector<Poz> ellenseges_poz = ellenseges_babuk_pozicioja(j.ellenfel());
+    std::vector<Poz> ellenseges_poz = egyszinu_babuk_pozicioja(j.ellenfel());
     for (auto poz : ellenseges_poz) {
         if(operator[](poz)->uti_a_kiralyt(poz, *this))
             return true;

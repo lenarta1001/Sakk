@@ -3,7 +3,8 @@
 
 enum Szin {
     fekete,
-    feher
+    feher,
+    none
 };
 
 #endif // SZIN_H
