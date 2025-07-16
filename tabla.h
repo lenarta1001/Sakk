@@ -20,6 +20,7 @@ public:
     bool benne_van(const Poz& p) const;
     std::vector<Poz> babuk_pozicioja() const;
     std::vector<Poz> egyszinu_babuk_pozicioja(const Jatekos &jatekos) const;
+    bool uresek(std::vector<Poz> poziciok);
     bool sakkban_van(const Jatekos &j) const;
     ~Tabla();
 };

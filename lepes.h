@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "poz.h"
-
+#include "eltolas.h"
 
 class Tabla;
 class Babu;
@@ -35,6 +35,29 @@ public:
     Lepes* copy();
     void elvegez(Tabla& t) const;
     ~ParasztAtvaltozas();
+};
+
+class KiralyOldaliSanc : public Lepes {
+    Poz bastya_kezdo;
+    Poz bastya_veg;
+    Eltolas irany;
+public:
+    KiralyOldaliSanc(const Poz& k) : Lepes(k, Poz(k.get_sor(), 6)), bastya_kezdo(k.get_sor(), 7), bastya_veg(k.get_sor(), 5), irany(Eltolas::kelet) {}
+    Lepes* copy() { return new KiralyOldaliSanc(kezdo, veg, bastya_kezdo, bastya_veg, irany); }
+    void elvegez(Tabla& t) const;
+    bool ervenyes(Tabla& tabla) const;
+    ~KiralyOldaliSanc() {}
+};
+
+class KiralynoOldaliSanc : public Lepes {
+    Poz bastya_kezdo;
+    Poz bastya_veg;
+    Eltolas irany;
+public:
+    KiralynoOldaliSanc(const Poz& k) : Lepes(k, Poz(k.get_sor(), 2)), bastya_kezdo(k.get_sor(), 0), bastya_veg(k.get_sor(), 3), irany(Eltolas::nyugat) {}
+    Lepes* copy() { return new KiralynoOldaliSanc(kezdo, veg, bastya_kezdo, bastya_veg, irany); }
+    void elvegez(Tabla& t) const;
+    ~KiralynoOldaliSanc() {}
 };
 
 class Lepesek : public std::vector<Lepes*> {

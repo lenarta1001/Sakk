@@ -147,17 +147,35 @@ Lepesek Kiraly::lepesek(const Poz& kezdo, const Tabla& tabla) const {
         Poz veg = kezdo + iranyok[i];
         if (tabla.benne_van(veg) && (tabla.ures(veg) || tabla[veg]->get_szin() != szin))
             elerhetok.push_back(new NormalLepes(kezdo, veg));
-        }
+    }
+    if (sancolhat_kiraly_oldalon(kezdo, tabla))
+        elerhetok.push_back(new KiralynoOldaliSanc(kezdo));
+    if (sancolhat_kiralyno_oldalon(kezdo, tabla))
+        elerhetok.push_back(new KiralynoOldaliSanc(kezdo))
 
     return elerhetok;
+}
+
+bool Kiraly::sancolhat_kiraly_oldalon(Poz kezdo, Tabla &tabla) {
+    std::vector<Poz> poziciok = { Poz(kezdo.get_sor(), 5), Poz(kezdo.get_sor(), 6)  };
+    Poz bastya_poz(kezdo.get_sor(), 7);
+
+    return !mozgott() && tabla.uresek(poziciok) && !tabla.ures(bastya_poz) && !tabla[bastya_poz]->mozgott();
+}
+
+bool Kiraly::sancolhat_kiralyno_oldalon(Tabla &tabla) {
+    std::vector<Poz> poziciok = { Poz(kezdo.get_sor(), 1), Poz(kezdo.get_sor(), 2), Poz(kezdo.get_sor(), 3)  };
+    Poz bastya_poz(kezdo.get_sor(), 0);
+
+    return !mozgott() && tabla.uresek(poziciok) && !tabla.ures(bastya_poz) && !tabla[bastya_poz]->mozgott();
 }
 
 bool Babu::uti_a_kiralyt(const Poz& poz, const Tabla& tabla) const {
     Lepesek lehetseges_lepesek = lepesek(poz, tabla);
     for (size_t i = 0; i < lehetseges_lepesek.size(); i++) {
         Poz veg = lehetseges_lepesek[i]->veg;
-    if (tabla[veg] != nullptr && tabla[veg]->kiraly_e()) {
-            return true;
+        if (tabla[veg] != nullptr && tabla[veg]->kiraly_e()) {
+                return true;
         }
     }
     return false;

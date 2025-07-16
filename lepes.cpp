@@ -32,3 +32,55 @@ Lepes* ParasztAtvaltozas::copy() {
 ParasztAtvaltozas::~ParasztAtvaltozas() {
     delete mive;
 }
+
+void KiralyOldaliSanc::elvegez(Tabla& tabla) {
+    NormalLepes kiraly_lepes(kezdo, veg);
+    kiraly_lepes.elvegez();
+    NormalLepes bastya_lepes(bastya_kezdo, bastya_veg);
+    bastya_lepes.elvegez();
+}
+
+void KiralynoOldaliSanc::elvegez(Tabla& tabla) {
+    NormalLepes kiraly_lepes(kezdo, veg);
+    kiraly_lepes.elvegez();
+    NormalLepes bastya_lepes(bastya_kezdo, bastya_veg);
+    bastya_lepes.elvegez();
+}
+
+bool KiralynoOldaliSanc::ervenyes(Tabla& tabla) const {
+    Tabla masolat = tabla;
+    Poz mozgo_kiraly = kezdo;
+    Jatekos akt_jatekos = tabla[kezdo]->get_szin();
+
+    if (tabla.sakkban_van(akt_jatekos))
+        return false;
+
+    for (int i = 0; i < 2; i++) {
+        NormalLepes(mozgo_kiraly, mozgo_kiraly + irany).elvegez(masolat);
+        if (masolat.sakkban_van(akt_jatekos))
+            return false;
+        mozgo_kiraly += irany;
+    }
+
+    return false;
+}
+
+bool KiralyOldaliSanc::ervenyes(Tabla& tabla) const {
+    Tabla masolat = tabla;
+    Poz mozgo_kiraly = kezdo;
+    Jatekos akt_jatekos = tabla[kezdo]->get_szin();
+
+    if (tabla.sakkban_van(akt_jatekos))
+        return false;
+
+    for (int i = 0; i < 2; i++) {
+        NormalLepes(mozgo_kiraly, mozgo_kiraly + irany).elvegez(masolat);
+        if (masolat.sakkban_van(akt_jatekos))
+            return false;
+        mozgo_kiraly += irany;
+    }
+
+    return false;
+}
+
+

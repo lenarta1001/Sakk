@@ -19,6 +19,7 @@ public:
     virtual Lepesek lepesek(const Poz& kezdo, const Tabla& tabla) const = 0;
     virtual Babu* copy() const = 0;
     Szin get_szin() const { return szin; }
+    bool mozgott() const { return mozgott; }
     virtual bool kiraly_e() const = 0;
     virtual bool uti_a_kiralyt(const Poz& poz, const Tabla& tabla) const;
     virtual ~Babu() {}
@@ -69,6 +70,8 @@ public:
     Lepesek lepesek(const Poz& kezdo, const Tabla& tabla) const;
     Babu* copy() const { return new Kiraly(szin, mozgott); }
     bool kiraly_e() const { return true; }
+    bool sancolhat_kiraly_oldalon(Tabla& tabla);
+    bool sancolhat_kiralyno_oldalon(Tabla& tabla);
 };
 
 class Kiralyno : public Babu {

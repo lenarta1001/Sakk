@@ -81,6 +81,14 @@ std::vector<Poz> Tabla::egyszinu_babuk_pozicioja(const Jatekos& jatekos) const {
     return poziciok;
 }
 
+bool Tabla::uresek(std::vector<Poz> poziciok) {
+    for (size_t i = 0; i < poziciok.size(); i++) {
+        if (!ures(poziciok[i]))
+            return false;
+    }
+    return true;
+}
+
 bool Tabla::sakkban_van(const Jatekos &j) const {
     std::vector<Poz> ellenseges_poz = egyszinu_babuk_pozicioja(j.ellenfel());
     for (auto poz : ellenseges_poz) {
@@ -90,9 +98,9 @@ bool Tabla::sakkban_van(const Jatekos &j) const {
     return false;
 }
 
-Tabla::Tabla(const Tabla& tabla) {
-    std::vector<Poz> poziciok = tabla.babuk_pozicioja();
-    for (auto poz : poziciok) {
-        this->tabla[poz.get_sor()][poz.get_oszlop()] = tabla[poz]->copy();
+Tabla::Tabla(const Tabla& t) : tabla(8, std::vector<Babu*>(8, 0)) {
+    for (size_t i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++)
+            this->tabla[i][j] = t.tabla[i][j]->copy();
     }
 }
