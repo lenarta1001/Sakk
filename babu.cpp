@@ -13,10 +13,17 @@ Lepesek Paraszt::elore_lepesek(const Poz &kezdo, const Tabla &tabla) const {
     Poz kovetkezo = kezdo + irany;
 
     if (tabla.benne_van(kovetkezo) && tabla.ures(kovetkezo)) {
-        elerhetok.push_back(new NormalLepes(kezdo, kovetkezo));
-        Poz kettos = kovetkezo + irany;
-        if (!mozgott && tabla.benne_van(kettos) && tabla.ures(kettos))
-            elerhetok.push_back(new NormalLepes(kezdo, kettos));
+        if (kovetkezo.get_sor() == 0 || kovetkezo.get_sor() == 7) {
+            elerhetok.push_back(new ParasztAtvaltozas(kezdo, kovetkezo, new Kiralyno(get_szin(), true)));
+            elerhetok.push_back(new ParasztAtvaltozas(kezdo, kovetkezo, new Futo(get_szin(), true)));
+            elerhetok.push_back(new ParasztAtvaltozas(kezdo, kovetkezo, new Huszar(get_szin(), true)));
+            elerhetok.push_back(new ParasztAtvaltozas(kezdo, kovetkezo, new Bastya(get_szin(), true)));
+        } else {
+            elerhetok.push_back(new NormalLepes(kezdo, kovetkezo));
+            Poz kettos = kovetkezo + irany;
+            if (!mozgott && tabla.benne_van(kettos) && tabla.ures(kettos))
+                elerhetok.push_back(new NormalLepes(kezdo, kettos));
+        }
     }
 
     return elerhetok;
@@ -24,14 +31,22 @@ Lepesek Paraszt::elore_lepesek(const Poz &kezdo, const Tabla &tabla) const {
 
 Lepesek Paraszt::atlos_lepesek(const Poz &kezdo, const Tabla &tabla) const {
     Lepesek elerhetok;
-    Poz egyik_oldal = kezdo + Eltolas::kelet;
-    Poz masik_oldal = kezdo + Eltolas::nyugat;
 
-    if (tabla.benne_van(egyik_oldal) && !tabla.ures(egyik_oldal) && tabla[egyik_oldal]->get_szin() != szin)
-        elerhetok.push_back(new NormalLepes(kezdo, egyik_oldal));
-
-    if (tabla.benne_van(masik_oldal) && !tabla.ures(masik_oldal) && tabla[masik_oldal]->get_szin() != szin)
-        elerhetok.push_back(new NormalLepes(kezdo, masik_oldal));
+    Eltolas oldalsok[2] = { Eltolas::kelet,  Eltolas::nyugat };
+    
+    for (auto oldalso : oldalsok) {
+        Poz atlos = kezdo + irany + oldalso;
+        if (tabla.benne_van(atlos) && !tabla.ures(atlos) && tabla[atlos]->get_szin() != szin) {
+            if (atlos.get_sor() == 0 || atlos.get_sor() == 7) {
+                elerhetok.push_back(new ParasztAtvaltozas(kezdo, atlos, new Kiralyno(get_szin(), true)));
+                elerhetok.push_back(new ParasztAtvaltozas(kezdo, atlos, new Futo(get_szin(), true)));
+                elerhetok.push_back(new ParasztAtvaltozas(kezdo, atlos, new Huszar(get_szin(), true)));
+                elerhetok.push_back(new ParasztAtvaltozas(kezdo, atlos, new Bastya(get_szin(), true)));
+            } else {
+                elerhetok.push_back(new NormalLepes(kezdo, atlos));
+            }
+        }
+    }
 
     return elerhetok;
 }

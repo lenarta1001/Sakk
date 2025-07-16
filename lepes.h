@@ -6,6 +6,7 @@
 
 
 class Tabla;
+class Babu;
 
 class Lepes {
 public:
@@ -24,6 +25,16 @@ public:
     Lepes* copy() { return new NormalLepes(kezdo, veg); }
     void elvegez(Tabla& t) const;
     ~NormalLepes() {}
+};
+
+class ParasztAtvaltozas : public Lepes {
+    Babu* mive;
+public:
+    ParasztAtvaltozas(const Poz& k, const Poz& v, Babu* mive) : Lepes(k, v), mive(mive) {}
+    ParasztAtvaltozas(const ParasztAtvaltozas& p);
+    Lepes* copy();
+    void elvegez(Tabla& t) const;
+    ~ParasztAtvaltozas();
 };
 
 class Lepesek : public std::vector<Lepes*> {

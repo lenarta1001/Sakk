@@ -147,6 +147,7 @@ CMakeFiles/Sakk.dir/jatekallas.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/vector.tcc \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekos.h \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szin.h \
+ C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eredmeny.h \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.h \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.h \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.h \

@@ -10,4 +10,6 @@ class Eredmeny {
 public:
     Eredmeny(Jatekos j, std::string o) : nyertes(j), ok(o) {}
     Eredmeny() : nyertes(none), ok("") {}
-}
+};
+
+#endif // EREDMENY_H
