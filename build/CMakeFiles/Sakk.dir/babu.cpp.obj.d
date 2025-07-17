@@ -148,4 +148,12 @@ CMakeFiles/Sakk.dir/babu.cpp.obj: \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.h \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.h \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.h \
- C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.h
+ C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.h \
+ C:/msys64/mingw64/include/c++/14.2.0/map \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/stl_tree.h \
+ C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/stl_map.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/stl_multimap.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h \
+ C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekos.h

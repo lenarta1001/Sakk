@@ -148,5 +148,12 @@ CMakeFiles/Sakk.dir/lepes.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/istream \
  C:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
- C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.h \
- C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekos.h
+ C:/msys64/mingw64/include/c++/14.2.0/map \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/stl_tree.h \
+ C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/stl_map.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/stl_multimap.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h \
+ C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekos.h \
+ C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.h

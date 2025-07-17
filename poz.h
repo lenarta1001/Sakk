@@ -9,7 +9,7 @@ class Poz {
     unsigned sor;
     unsigned oszlop;
 public:
-    Poz(unsigned s, unsigned o) : sor(s), oszlop(o) {}
+    Poz(unsigned s = 9, unsigned o = 9) : sor(s), oszlop(o) {}
     unsigned get_sor() const { return sor; }
     unsigned get_oszlop() const { return oszlop; }
     Szin szin() { return (sor + oszlop) % 2 == 0 ? Szin::feher : Szin::fekete; }

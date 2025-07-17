@@ -4,7 +4,7 @@
 
 1752487585 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\eltolas.h
 
-1752509462 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekallas.cpp
+1752688005 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekallas.cpp
 	"jatekallas.h"
 	"tabla.h"
 	"poz.h"
@@ -16,7 +16,7 @@
 	"jatekos.h"
 	"eredmeny.h"
 
-1752504941 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\babu.h
+1752689432 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\babu.h
 	<iostream>
 	<vector>
 	"szin.h"
@@ -25,22 +25,25 @@
 
 1752509204 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\szin.h
 
-1752507046 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\tabla.h
+1752753231 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\tabla.h
 	<iostream>
 	<vector>
+	<map>
+	"jatekos.h"
 
-1752476577 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\poz.h
+1752687017 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\poz.h
 	"szin.h"
 	"eltolas.h"
 
-1752504574 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekos.h
+1752753597 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekos.h
 	"szin.h"
 
-1752661201 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.h
+1752753124 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.h
 	<vector>
 	"poz.h"
+	"eltolas.h"
 
-1752660940 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.cpp
+1752752999 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.cpp
 	"lepes.h"
 	"tabla.h"
 	"babu.h"
@@ -50,7 +53,7 @@
 	"poz.h"
 	"eltolas.h"
 
-1752657358 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\babu.cpp
+1752689407 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\babu.cpp
 	<iostream>
 	<vector>
 	"babu.h"
@@ -59,6 +62,7 @@
 	"lepes.h"
 	"szin.h"
 	"tabla.h"
+	"jatekos.h"
 
 1752507092 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\tabla.cpp
 	"tabla.h"

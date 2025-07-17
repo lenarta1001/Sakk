@@ -18,8 +18,10 @@ Lepesek JatekAllas::ervenyes_lepesek(const Poz& p) {
 }
 
 void JatekAllas::lep(Lepes* l) {
+    tabla.del_atugrott_pozicio(akt_jatekos);
     l->elvegez(tabla);
     akt_jatekos = akt_jatekos.ellenfel();
+    vege_ellenorzes();
 }
 
 Lepesek JatekAllas::osszes_ervenyes_lepes(const Jatekos &jatekos) {
@@ -38,6 +40,6 @@ void JatekAllas::vege_ellenorzes() {
             eredmeny = Eredmeny(akt_jatekos.ellenfel(), "sakkmatt");
         else
             eredmeny = Eredmeny(none, "patt");
-        vege = false;
+        vege = true;
     }
 }

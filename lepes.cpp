@@ -3,11 +3,11 @@
 #include "babu.h"
 #include "jatekos.h"
 
-void NormalLepes::elvegez(Tabla &t) const {
-    Babu* babu = t[kezdo];
-    delete t[veg];
-    t[veg] = babu;
-    t[kezdo] = nullptr;
+void NormalLepes::elvegez(Tabla &tabla) const {
+    Babu* babu = tabla[kezdo];
+    delete tabla[veg];
+    tabla[veg] = babu;
+    tabla[kezdo] = nullptr;
 }
 
 bool Lepes::ervenyes(Tabla& tabla) const {
@@ -17,10 +17,16 @@ bool Lepes::ervenyes(Tabla& tabla) const {
     return !masolat.sakkban_van(akt);
 }
 
-void ParasztAtvaltozas::elvegez(Tabla& t) const {
-    delete t[veg];
-    t[veg] = mive->copy();
-    t[kezdo] = nullptr;
+void DuplaLepes::elvegez(Tabla& tabla) const {
+    Jatekos akt_jatekos(tabla[kezdo]->get_szin());
+    tabla.set_atugrott_pozicio(akt_jatekos, atugrott);
+    NormalLepes(kezdo, veg).elvegez(tabla);
+}
+
+void ParasztAtvaltozas::elvegez(Tabla& tabla) const {
+    delete tabla[veg];
+    tabla[veg] = mive->copy();
+    tabla[kezdo] = nullptr;
 }
 
 ParasztAtvaltozas::ParasztAtvaltozas(const ParasztAtvaltozas& p) : Lepes(p.kezdo, p.veg), mive(p.mive->copy()) { }
@@ -33,18 +39,18 @@ ParasztAtvaltozas::~ParasztAtvaltozas() {
     delete mive;
 }
 
-void KiralyOldaliSanc::elvegez(Tabla& tabla) {
+void KiralyOldaliSanc::elvegez(Tabla& tabla) const {
     NormalLepes kiraly_lepes(kezdo, veg);
-    kiraly_lepes.elvegez();
+    kiraly_lepes.elvegez(tabla);
     NormalLepes bastya_lepes(bastya_kezdo, bastya_veg);
-    bastya_lepes.elvegez();
+    bastya_lepes.elvegez(tabla);
 }
 
-void KiralynoOldaliSanc::elvegez(Tabla& tabla) {
+void KiralynoOldaliSanc::elvegez(Tabla& tabla) const {
     NormalLepes kiraly_lepes(kezdo, veg);
-    kiraly_lepes.elvegez();
+    kiraly_lepes.elvegez(tabla);
     NormalLepes bastya_lepes(bastya_kezdo, bastya_veg);
-    bastya_lepes.elvegez();
+    bastya_lepes.elvegez(tabla);
 }
 
 bool KiralynoOldaliSanc::ervenyes(Tabla& tabla) const {
@@ -83,4 +89,8 @@ bool KiralyOldaliSanc::ervenyes(Tabla& tabla) const {
     return false;
 }
 
-
+void EnPassant::elvegez(Tabla& tabla) const {
+    delete tabla[leutott_poz];
+    tabla[leutott_poz] = nullptr;
+    NormalLepes(kezdo, veg).elvegez(tabla);
+}

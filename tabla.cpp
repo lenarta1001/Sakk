@@ -49,6 +49,19 @@ void Tabla::init() {
     }
 }
 
+void Tabla::set_atugrott_pozicio(const Jatekos &j, Poz poz) {
+    atugrott_poziciok[j] = poz;
+}
+
+void Tabla::del_atugrott_pozicio(const Jatekos &j) {
+    atugrott_poziciok.erase(j);
+}
+
+Poz &Tabla::get_atugrott_pozicio(const Jatekos &j)
+{
+    return atugrott_poziciok[j];
+}
+
 bool Tabla::ures(const Poz& p) const {
     return tabla[p.get_sor()][p.get_oszlop()] == nullptr;
 }
@@ -89,7 +102,7 @@ bool Tabla::uresek(std::vector<Poz> poziciok) {
     return true;
 }
 
-bool Tabla::sakkban_van(const Jatekos &j) const {
+bool Tabla::sakkban_van(const Jatekos &j) {
     std::vector<Poz> ellenseges_poz = egyszinu_babuk_pozicioja(j.ellenfel());
     for (auto poz : ellenseges_poz) {
         if(operator[](poz)->uti_a_kiralyt(poz, *this))
