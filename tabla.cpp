@@ -2,6 +2,7 @@
 #include "babu.h"
 #include "poz.h"
 #include "jatekos.h"
+#include "szamolo.h"
 
 Tabla::Tabla() : tabla(8, std::vector<Babu*>(8, 0))  {
     for (int i = 0; i < 8; i++)
@@ -109,6 +110,57 @@ bool Tabla::sakkban_van(const Jatekos &j) {
             return true;
     }
     return false;
+}
+
+Szamolo Tabla::babuk_szama_tipusonkent() {
+    Szamolo babuk_szama;
+    std::vector<Poz> poziciok = babuk_pozicioja();
+    for (auto poz : poziciok) {
+        Babu* babu = operator[](poz);
+        babuk_szama.novel(Jatekos(babu->get_szin()), babu->get_tipus());
+    }
+    return babuk_szama;
+}
+
+bool Tabla::elegtelen_anyag() {
+    return KiralyvsKiraly() || KiralyFutovsKiralyFuto() || KiralyvsKiralyFuto() || KiralyvsKiralyHuszar();
+}
+
+
+bool Tabla::KiralyvsKiraly() {
+    Szamolo sz = babuk_szama_tipusonkent();
+    return sz.get_osszes() == 2;
+}
+
+bool Tabla::KiralyvsKiralyFuto() {
+    Szamolo sz = babuk_szama_tipusonkent();
+    return sz.get_osszes() == 3 && (sz.mennyi_feher(futo) == 1 || sz.mennyi_fekete(futo) == 1);
+}
+
+bool Tabla::KiralyvsKiralyHuszar() {
+    Szamolo sz = babuk_szama_tipusonkent();
+    return sz.get_osszes() == 3 && (sz.mennyi_feher(huszar) == 1 || sz.mennyi_fekete(huszar) == 1);
+}
+
+bool Tabla::KiralyFutovsKiralyFuto() {
+    Szamolo sz = babuk_szama_tipusonkent();
+
+    if (sz.get_osszes() != 4 || sz.mennyi_feher(huszar) != 1 || sz.mennyi_fekete(huszar) != 1)
+        return false;
+
+    Poz feher_futo = holvan(futo, feher);
+    Poz fekete_futo = holvan(futo, fekete);
+    return feher_futo.szin() != fekete_futo.szin();
+}
+
+Poz Tabla::holvan(BabuTipus babutipus, const Szin& szin) {
+    std::vector<Poz> poziciok = egyszinu_babuk_pozicioja(szin);
+    for (auto poz : poziciok) {
+        Babu* babu = operator[](poz);
+        if (babu->get_tipus() == babutipus)
+            return poz;
+    }
+    return Poz();
 }
 
 Tabla::Tabla(const Tabla& t) : tabla(8, std::vector<Babu*>(8, 0)) {

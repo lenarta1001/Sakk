@@ -6,14 +6,16 @@
 #include <map>
 
 #include "jatekos.h"
+#include "babu.h"
 
 class Babu;
 class Poz;
 class Jatekos;
+class Szamolo;
 
 class Tabla {
     std::vector<std::vector<Babu*>> tabla;
-    std::map<Jatekos, Poz> atugrott_poziciok;
+    std::map<Jatekos, Poz> atugrott_poziciok; 
 public:
     Tabla();
     Tabla(const Tabla&);
@@ -29,6 +31,13 @@ public:
     std::vector<Poz> egyszinu_babuk_pozicioja(const Jatekos &jatekos) const;
     bool uresek(std::vector<Poz> poziciok);
     bool sakkban_van(const Jatekos &j);
+    Szamolo babuk_szama_tipusonkent();
+    bool elegtelen_anyag();
+    bool KiralyvsKiraly();
+    bool KiralyvsKiralyFuto();
+    bool KiralyvsKiralyHuszar();
+    bool KiralyFutovsKiralyFuto();
+    Poz holvan(BabuTipus babutipus, const Szin& szin);
     ~Tabla();
 };
 #endif // TABLA_H

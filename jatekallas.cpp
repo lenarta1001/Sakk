@@ -41,5 +41,8 @@ void JatekAllas::vege_ellenorzes() {
         else
             eredmeny = Eredmeny(none, "patt");
         vege = true;
+    } else if (tabla.elegtelen_anyag()) {
+        vege = true;
+        eredmeny = Eredmeny(none, "elegtelen anyag");
     }
 }

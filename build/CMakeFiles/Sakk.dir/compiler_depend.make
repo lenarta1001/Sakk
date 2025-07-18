@@ -4,6 +4,7 @@
 CMakeFiles/Sakk.dir/babu.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.cpp \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.h \
+  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekos.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szin.h \
@@ -28,6 +29,7 @@ CMakeFiles/Sakk.dir/babu.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME
   C:/msys64/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception_defines.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
@@ -47,6 +49,7 @@ CMakeFiles/Sakk.dir/babu.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME
   C:/msys64/mingw64/include/c++/14.2.0/bits/move.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/nested_exception.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/postypes.h \
@@ -63,7 +66,10 @@ CMakeFiles/Sakk.dir/babu.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_map.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_multimap.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_pair.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_tree.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_vector.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/streambuf.tcc \
@@ -87,6 +93,7 @@ CMakeFiles/Sakk.dir/babu.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME
   C:/msys64/mingw64/include/c++/14.2.0/debug/assertions.h \
   C:/msys64/mingw64/include/c++/14.2.0/debug/debug.h \
   C:/msys64/mingw64/include/c++/14.2.0/exception \
+  C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/atomicity.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
@@ -97,6 +104,7 @@ CMakeFiles/Sakk.dir/babu.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME
   C:/msys64/mingw64/include/c++/14.2.0/iosfwd \
   C:/msys64/mingw64/include/c++/14.2.0/iostream \
   C:/msys64/mingw64/include/c++/14.2.0/istream \
+  C:/msys64/mingw64/include/c++/14.2.0/map \
   C:/msys64/mingw64/include/c++/14.2.0/new \
   C:/msys64/mingw64/include/c++/14.2.0/ostream \
   C:/msys64/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
@@ -191,6 +199,7 @@ CMakeFiles/Sakk.dir/jatekallas.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andr
   C:/msys64/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception_defines.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
@@ -210,6 +219,7 @@ CMakeFiles/Sakk.dir/jatekallas.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andr
   C:/msys64/mingw64/include/c++/14.2.0/bits/move.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/nested_exception.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/postypes.h \
@@ -226,7 +236,10 @@ CMakeFiles/Sakk.dir/jatekallas.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andr
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_map.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_multimap.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_pair.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_tree.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_vector.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/streambuf.tcc \
@@ -250,6 +263,7 @@ CMakeFiles/Sakk.dir/jatekallas.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andr
   C:/msys64/mingw64/include/c++/14.2.0/debug/assertions.h \
   C:/msys64/mingw64/include/c++/14.2.0/debug/debug.h \
   C:/msys64/mingw64/include/c++/14.2.0/exception \
+  C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/atomicity.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
@@ -260,6 +274,7 @@ CMakeFiles/Sakk.dir/jatekallas.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andr
   C:/msys64/mingw64/include/c++/14.2.0/iosfwd \
   C:/msys64/mingw64/include/c++/14.2.0/iostream \
   C:/msys64/mingw64/include/c++/14.2.0/istream \
+  C:/msys64/mingw64/include/c++/14.2.0/map \
   C:/msys64/mingw64/include/c++/14.2.0/new \
   C:/msys64/mingw64/include/c++/14.2.0/ostream \
   C:/msys64/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
@@ -349,6 +364,7 @@ CMakeFiles/Sakk.dir/lepes.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BM
   C:/msys64/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception_defines.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
@@ -368,6 +384,7 @@ CMakeFiles/Sakk.dir/lepes.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BM
   C:/msys64/mingw64/include/c++/14.2.0/bits/move.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/nested_exception.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/postypes.h \
@@ -384,7 +401,10 @@ CMakeFiles/Sakk.dir/lepes.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BM
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_map.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_multimap.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_pair.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_tree.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_vector.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/streambuf.tcc \
@@ -408,6 +428,7 @@ CMakeFiles/Sakk.dir/lepes.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BM
   C:/msys64/mingw64/include/c++/14.2.0/debug/assertions.h \
   C:/msys64/mingw64/include/c++/14.2.0/debug/debug.h \
   C:/msys64/mingw64/include/c++/14.2.0/exception \
+  C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/atomicity.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
@@ -418,6 +439,7 @@ CMakeFiles/Sakk.dir/lepes.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BM
   C:/msys64/mingw64/include/c++/14.2.0/iosfwd \
   C:/msys64/mingw64/include/c++/14.2.0/iostream \
   C:/msys64/mingw64/include/c++/14.2.0/istream \
+  C:/msys64/mingw64/include/c++/14.2.0/map \
   C:/msys64/mingw64/include/c++/14.2.0/new \
   C:/msys64/mingw64/include/c++/14.2.0/ostream \
   C:/msys64/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
@@ -490,6 +512,7 @@ CMakeFiles/Sakk.dir/tabla.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BM
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekos.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.h \
+  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szin.h \
   C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.h \
   C:/msys64/mingw64/include/_mingw.h \
@@ -512,6 +535,7 @@ CMakeFiles/Sakk.dir/tabla.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BM
   C:/msys64/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception_defines.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
@@ -531,6 +555,7 @@ CMakeFiles/Sakk.dir/tabla.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BM
   C:/msys64/mingw64/include/c++/14.2.0/bits/move.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/nested_exception.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
   C:/msys64/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/postypes.h \
@@ -547,7 +572,10 @@ CMakeFiles/Sakk.dir/tabla.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BM
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_map.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_multimap.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_pair.h \
+  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_tree.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/stl_vector.h \
   C:/msys64/mingw64/include/c++/14.2.0/bits/streambuf.tcc \
@@ -571,6 +599,7 @@ CMakeFiles/Sakk.dir/tabla.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BM
   C:/msys64/mingw64/include/c++/14.2.0/debug/assertions.h \
   C:/msys64/mingw64/include/c++/14.2.0/debug/debug.h \
   C:/msys64/mingw64/include/c++/14.2.0/exception \
+  C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/atomicity.h \
   C:/msys64/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
@@ -581,6 +610,7 @@ CMakeFiles/Sakk.dir/tabla.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BM
   C:/msys64/mingw64/include/c++/14.2.0/iosfwd \
   C:/msys64/mingw64/include/c++/14.2.0/iostream \
   C:/msys64/mingw64/include/c++/14.2.0/istream \
+  C:/msys64/mingw64/include/c++/14.2.0/map \
   C:/msys64/mingw64/include/c++/14.2.0/new \
   C:/msys64/mingw64/include/c++/14.2.0/ostream \
   C:/msys64/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
@@ -645,14 +675,6 @@ CMakeFiles/Sakk.dir/tabla.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BM
 
 C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.cpp:
 
-C:/msys64/mingw64/include/c++/14.2.0/debug/assertions.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/ext/numeric_traits.h:
-
-C:/msys64/mingw64/include/_mingw.h:
-
 C:/msys64/mingw64/include/c++/14.2.0/bits/basic_ios.tcc:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/invoke.h:
@@ -677,11 +699,27 @@ C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.h:
 
 C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.h:
 
+C:/msys64/mingw64/include/c++/14.2.0/bits/refwrap.h:
+
+C:/msys64/mingw64/include/_mingw_stat64.h:
+
+C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekos.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/stl_tree.h:
+
 C:/msys64/mingw64/include/c++/14.2.0/bits/new_allocator.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/backward/binders.h:
 
 C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/debug/assertions.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/ext/numeric_traits.h:
+
+C:/msys64/mingw64/include/_mingw.h:
 
 C:/msys64/mingw64/include/_mingw_mac.h:
 
@@ -695,21 +733,17 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h:
 
 C:/msys64/mingw64/include/_mingw_secapi.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/refwrap.h:
-
-C:/msys64/mingw64/include/_mingw_stat64.h:
-
 C:/msys64/mingw64/include/_timeval.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bit:
 
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h:
+C:/msys64/mingw64/include/c++/14.2.0/bits/postypes.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/ios_base.h:
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/postypes.h:
+C:/msys64/mingw64/include/c++/14.2.0/bits/ios_base.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/alloc_traits.h:
 
@@ -733,11 +767,11 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/stl_construct.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/exception.h:
-
 C:/msys64/mingw64/include/c++/14.2.0/bits/exception_defines.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/bits/stl_pair.h:
+C:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/exception.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/exception_ptr.h:
 
@@ -773,6 +807,8 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/move.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/nested_exception.h:
 
+C:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h:
+
 C:/msys64/mingw64/include/c++/14.2.0/bits/predefined_ops.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/std_abs.h:
@@ -786,6 +822,12 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h:
 C:/msys64/mingw64/include/process.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/stl_map.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/stl_multimap.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/stl_pair.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/stl_vector.h:
 
@@ -829,6 +871,8 @@ C:/msys64/mingw64/include/c++/14.2.0/debug/debug.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/exception:
 
+C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h:
+
 C:/msys64/mingw64/include/c++/14.2.0/ext/alloc_traits.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/ext/atomicity.h:
@@ -848,6 +892,8 @@ C:/msys64/mingw64/include/c++/14.2.0/iosfwd:
 C:/msys64/mingw64/include/c++/14.2.0/iostream:
 
 C:/msys64/mingw64/include/c++/14.2.0/istream:
+
+C:/msys64/mingw64/include/c++/14.2.0/map:
 
 C:/msys64/mingw64/include/corecrt_wstdlib.h:
 
@@ -965,8 +1011,8 @@ C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eredmeny.h:
 
 C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekallas.h:
 
-C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekos.h:
-
 C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.cpp:
 
 C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.cpp:
+
+C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.h:

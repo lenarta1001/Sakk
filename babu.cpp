@@ -178,7 +178,7 @@ bool Babu::uti_a_kiralyt(const Poz& poz, Tabla& tabla) const {
     Lepesek lehetseges_lepesek = lepesek(poz, tabla);
     for (size_t i = 0; i < lehetseges_lepesek.size(); i++) {
         Poz veg = lehetseges_lepesek[i]->veg;
-        if (tabla[veg] != nullptr && tabla[veg]->kiraly_e()) {
+        if (tabla[veg] != nullptr && tabla[veg]->get_tipus() == kiraly) {
                 return true;
         }
     }
@@ -189,7 +189,7 @@ bool Paraszt::uti_a_kiralyt(const Poz& poz, Tabla& tabla) const {
     Lepesek atlosan = atlos_lepesek(poz, tabla);
     for (size_t i = 0; i < atlosan.size(); i++) {
         Poz veg = atlosan[i]->veg;
-        if (tabla[veg] != nullptr && tabla[veg]->kiraly_e()) {
+        if (tabla[veg] != nullptr && tabla[veg]->get_tipus() == kiraly) {
             return true;
         }
     }

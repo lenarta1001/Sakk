@@ -64,7 +64,9 @@
         "numbers": "cpp",
         "span": "cpp",
         "text_encoding": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "map": "cpp",
+        "xtree": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "cmake.generator": "Ninja",

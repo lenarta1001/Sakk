@@ -156,4 +156,5 @@ CMakeFiles/Sakk.dir/tabla.cpp.obj: \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.h \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.h \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.h \
- C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.h
+ C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.h \
+ C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.h
