@@ -15,7 +15,7 @@ class Szamolo;
 
 class Tabla {
     std::vector<std::vector<Babu*>> tabla;
-    std::map<Jatekos, Poz> atugrott_poziciok; 
+    std::map<Jatekos, Poz> atugrott_poziciok;
 public:
     Tabla();
     Tabla(const Tabla&);
@@ -42,7 +42,7 @@ public:
     Poz holvan(BabuTipus babutipus, const Szin& szin);
     bool kiralyoldali_sanc_jog(const Jatekos &j) const;
     bool kiralynooldali_sanc_jog(const Jatekos &j) const;
-    bool enpassant_jog(const Jatekos& j) const;
+    bool enpassant_jog(const Jatekos& j);
 
     ~Tabla();
 };

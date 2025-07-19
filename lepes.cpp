@@ -7,7 +7,7 @@ void NormalLepes::elvegez(Tabla &tabla) const {
     Babu* babu = tabla[kezdo];
     delete tabla[veg];
     tabla[veg] = babu;
-    tabla[kezdo] = nullptr;
+    tabla[kezdo] = nullptr; // !!! mozgott = true;
 }
 
 bool NormalLepes::parasztlepes_utes(Tabla& tabla) const {

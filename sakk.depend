@@ -4,19 +4,22 @@
 
 1752487585 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\eltolas.h
 
-1752772663 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekallas.cpp
+1752936687 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekallas.cpp
 	"jatekallas.h"
 	"tabla.h"
 	"poz.h"
 	"lepes.h"
 	"babu.h"
 
-1752509487 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekallas.h
+1752936139 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekallas.h
+	<map>
+	<iostream>
 	"tabla.h"
 	"jatekos.h"
 	"eredmeny.h"
+	"fenstring.h"
 
-1752830344 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\babu.h
+1752928931 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\babu.h
 	<iostream>
 	<vector>
 	"szin.h"
@@ -25,12 +28,12 @@
 
 1752509204 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\szin.h
 
-1752830553 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\tabla.h
+1752936806 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\tabla.h
 	<iostream>
 	<vector>
 	<map>
 	"jatekos.h"
-	"szamolo.h"
+	"babu.h"
 
 1752687017 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\poz.h
 	"szin.h"
@@ -39,12 +42,12 @@
 1752753708 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\jatekos.h
 	"szin.h"
 
-1752753124 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.h
+1752833993 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.h
 	<vector>
 	"poz.h"
 	"eltolas.h"
 
-1752752999 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.cpp
+1752931104 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\lepes.cpp
 	"lepes.h"
 	"tabla.h"
 	"babu.h"
@@ -76,9 +79,25 @@
 	"jatekos.h"
 	<string>
 
-1752831142 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\szamolo.h
+1752832305 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\szamolo.h
 	<iostream>
 	<map>
 	<vector>
 	"babu.h"
+
+1752832300 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\szamolo.cpp
+	"szamolo.h"
+	"jatekos.h"
+	"szin.h"
+	"babu.h"
+
+1752936652 source:c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\fenstring.cpp
+	"fenstring.h"
+	"tabla.h"
+	"poz.h"
+	<iostream>
+	<sstream>
+
+1752935675 c:\users\gabi\onedrive\dokumentumok\andris_bme\sakk\fenstring.h
+	<iostream>
 

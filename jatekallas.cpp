@@ -4,7 +4,16 @@
 #include "lepes.h"
 #include "babu.h"
 
-Lepesek JatekAllas::ervenyes_lepesek(const Poz& p) {
+void JatekAllas::fenstring_frissit() {
+    fenstring = FenString(akt_jatekos, tabla).get_s();
+    if (korabbi_fenstringek.count(fenstring) == 0)
+        korabbi_fenstringek[fenstring] = 1;
+    else
+        korabbi_fenstringek[fenstring]++;
+}
+
+Lepesek JatekAllas::ervenyes_lepesek(const Poz &p)
+{
     if (!tabla.benne_van(p) || tabla[p]->get_szin() != akt_jatekos.szin) {
         return Lepesek(0);
     }
@@ -20,12 +29,14 @@ Lepesek JatekAllas::ervenyes_lepesek(const Poz& p) {
 void JatekAllas::lep(Lepes* l) {
     tabla.del_atugrott_pozicio(akt_jatekos);
     l->elvegez(tabla);
-    if (l->parasztlepes_utes())
+    if (l->parasztlepes_utes(tabla)) {
+        korabbi_fenstringek.clear();
         otvenlepes_szabaly_szamlalo = 0;
-    else
+    } else
         otvenlepes_szabaly_szamlalo++;
-    
+
     akt_jatekos = akt_jatekos.ellenfel();
+    fenstring_frissit();
     vege_ellenorzes();
 }
 
@@ -52,5 +63,8 @@ void JatekAllas::vege_ellenorzes() {
     } else if (otvenlepes_szabaly_szamlalo >= 100) {
         vege = true;
         eredmeny = Eredmeny(none, "otvenlepeses-szabaly");
+    } else if (korabbi_fenstringek[fenstring] >= 3) {
+        vege = true;
+        eredmeny = Eredmeny(none, "haromszori allasismetles");
     }
 }

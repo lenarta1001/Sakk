@@ -174,27 +174,27 @@ Poz Tabla::holvan(BabuTipus babutipus, const Szin& szin) {
 
 bool Tabla::kiralyoldali_sanc_jog(const Jatekos &j) const {
     unsigned kezdosor = j.szin == feher ? 7 : 0;
-    if (ures(kezdosor, 4) || ures(kezdosor, 7))
+    if (ures(Poz(kezdosor, 4)) || ures(Poz(kezdosor, 7)))
         return false;
-    
+
     return !operator()(kezdosor, 4)->get_mozgott() && !operator()(kezdosor, 7)->get_mozgott();
 }
 
 bool Tabla::kiralynooldali_sanc_jog(const Jatekos &j) const {
     unsigned kezdosor = j.szin == feher ? 7 : 0;
-    if (ures(kezdosor, 4) || ures(kezdosor, 0))
+    if (ures(Poz(kezdosor, 4)) || ures(Poz(kezdosor, 0)))
         return false;
-    
+
     return !operator()(kezdosor, 4)->get_mozgott() && !operator()(kezdosor, 0)->get_mozgott();
 }
 
-bool Tabla::enpassant_jog(const Jatekos &j) const {
-    Poz atugrott = get_atugrott_pozicio(j.ellenfel());
+bool Tabla::enpassant_jog(const Jatekos &j) {
+    Poz atugrott = get_atugrott_pozicio(j.ellenfel()); // !!!! Lehet mashogy kene
     if (atugrott.get_oszlop() >= 9 && atugrott.get_sor() >= 9) {
         return false;
     }
     Poz lehetseges_uto_poziciok[2];
-    if (j.szin() == feher) {
+    if (j.szin == feher) {
         lehetseges_uto_poziciok[0] = atugrott + Eltolas::delkelet;
         lehetseges_uto_poziciok[1] = atugrott + Eltolas::delnyugat;
     } else {
@@ -208,7 +208,7 @@ bool Tabla::enpassant_jog(const Jatekos &j) const {
         }
         const Babu* babu = operator[](poz);
         if (babu->get_szin() == j.szin && babu->get_tipus() == paraszt) {
-            EnPassant lepes(poz);
+            EnPassant lepes(poz, atugrott);
             if (lepes.ervenyes(*this))
                 return true;
         }
