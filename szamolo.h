@@ -14,13 +14,7 @@ class Szamolo {
     std::map<BabuTipus, size_t> fekete_babutipusok_szama;
     size_t osszes;
 public:
-    Szamolo() : osszes(0) {
-        std::vector<BabuTipus> babutipusok = { kiraly, kiralyno, futo, huszar, bastya, paraszt };
-        for (size_t i = 0; i < babutipusok.size(); i++) {
-            feher_babutipusok_szama[babutipusok[i]] = 0;
-            fekete_babutipusok_szama[babutipusok[i]] = 0;
-        }
-    }
+    Szamolo();
     void novel(const Jatekos& j, BabuTipus babutipus);
     size_t mennyi_feher(BabuTipus babutipus);
     size_t mennyi_fekete(BabuTipus babutipus);

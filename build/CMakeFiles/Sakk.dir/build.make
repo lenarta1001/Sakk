@@ -73,6 +73,7 @@ CMakeFiles/Sakk.dir/codegen:
 .PHONY : CMakeFiles/Sakk.dir/codegen
 
 CMakeFiles/Sakk.dir/babu.cpp.obj: CMakeFiles/Sakk.dir/flags.make
+CMakeFiles/Sakk.dir/babu.cpp.obj: CMakeFiles/Sakk.dir/includes_CXX.rsp
 CMakeFiles/Sakk.dir/babu.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.cpp
 CMakeFiles/Sakk.dir/babu.cpp.obj: CMakeFiles/Sakk.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Sakk.dir/babu.cpp.obj"
@@ -87,6 +88,7 @@ CMakeFiles/Sakk.dir/babu.cpp.s: cmake_force
 	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.cpp -o CMakeFiles/Sakk.dir/babu.cpp.s
 
 CMakeFiles/Sakk.dir/eltolas.cpp.obj: CMakeFiles/Sakk.dir/flags.make
+CMakeFiles/Sakk.dir/eltolas.cpp.obj: CMakeFiles/Sakk.dir/includes_CXX.rsp
 CMakeFiles/Sakk.dir/eltolas.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.cpp
 CMakeFiles/Sakk.dir/eltolas.cpp.obj: CMakeFiles/Sakk.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Sakk.dir/eltolas.cpp.obj"
@@ -101,6 +103,7 @@ CMakeFiles/Sakk.dir/eltolas.cpp.s: cmake_force
 	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.cpp -o CMakeFiles/Sakk.dir/eltolas.cpp.s
 
 CMakeFiles/Sakk.dir/jatekallas.cpp.obj: CMakeFiles/Sakk.dir/flags.make
+CMakeFiles/Sakk.dir/jatekallas.cpp.obj: CMakeFiles/Sakk.dir/includes_CXX.rsp
 CMakeFiles/Sakk.dir/jatekallas.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekallas.cpp
 CMakeFiles/Sakk.dir/jatekallas.cpp.obj: CMakeFiles/Sakk.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Sakk.dir/jatekallas.cpp.obj"
@@ -115,6 +118,7 @@ CMakeFiles/Sakk.dir/jatekallas.cpp.s: cmake_force
 	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekallas.cpp -o CMakeFiles/Sakk.dir/jatekallas.cpp.s
 
 CMakeFiles/Sakk.dir/lepes.cpp.obj: CMakeFiles/Sakk.dir/flags.make
+CMakeFiles/Sakk.dir/lepes.cpp.obj: CMakeFiles/Sakk.dir/includes_CXX.rsp
 CMakeFiles/Sakk.dir/lepes.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.cpp
 CMakeFiles/Sakk.dir/lepes.cpp.obj: CMakeFiles/Sakk.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Sakk.dir/lepes.cpp.obj"
@@ -129,6 +133,7 @@ CMakeFiles/Sakk.dir/lepes.cpp.s: cmake_force
 	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.cpp -o CMakeFiles/Sakk.dir/lepes.cpp.s
 
 CMakeFiles/Sakk.dir/poz.cpp.obj: CMakeFiles/Sakk.dir/flags.make
+CMakeFiles/Sakk.dir/poz.cpp.obj: CMakeFiles/Sakk.dir/includes_CXX.rsp
 CMakeFiles/Sakk.dir/poz.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.cpp
 CMakeFiles/Sakk.dir/poz.cpp.obj: CMakeFiles/Sakk.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Sakk.dir/poz.cpp.obj"
@@ -143,6 +148,7 @@ CMakeFiles/Sakk.dir/poz.cpp.s: cmake_force
 	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.cpp -o CMakeFiles/Sakk.dir/poz.cpp.s
 
 CMakeFiles/Sakk.dir/tabla.cpp.obj: CMakeFiles/Sakk.dir/flags.make
+CMakeFiles/Sakk.dir/tabla.cpp.obj: CMakeFiles/Sakk.dir/includes_CXX.rsp
 CMakeFiles/Sakk.dir/tabla.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.cpp
 CMakeFiles/Sakk.dir/tabla.cpp.obj: CMakeFiles/Sakk.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Sakk.dir/tabla.cpp.obj"
@@ -156,6 +162,21 @@ CMakeFiles/Sakk.dir/tabla.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Sakk.dir/tabla.cpp.s"
 	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.cpp -o CMakeFiles/Sakk.dir/tabla.cpp.s
 
+CMakeFiles/Sakk.dir/szamolo.cpp.obj: CMakeFiles/Sakk.dir/flags.make
+CMakeFiles/Sakk.dir/szamolo.cpp.obj: CMakeFiles/Sakk.dir/includes_CXX.rsp
+CMakeFiles/Sakk.dir/szamolo.cpp.obj: C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.cpp
+CMakeFiles/Sakk.dir/szamolo.cpp.obj: CMakeFiles/Sakk.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Sakk.dir/szamolo.cpp.obj"
+	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Sakk.dir/szamolo.cpp.obj -MF CMakeFiles/Sakk.dir/szamolo.cpp.obj.d -o CMakeFiles/Sakk.dir/szamolo.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.cpp
+
+CMakeFiles/Sakk.dir/szamolo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Sakk.dir/szamolo.cpp.i"
+	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.cpp > CMakeFiles/Sakk.dir/szamolo.cpp.i
+
+CMakeFiles/Sakk.dir/szamolo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Sakk.dir/szamolo.cpp.s"
+	C:/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.cpp -o CMakeFiles/Sakk.dir/szamolo.cpp.s
+
 # Object files for target Sakk
 Sakk_OBJECTS = \
 "CMakeFiles/Sakk.dir/babu.cpp.obj" \
@@ -163,7 +184,8 @@ Sakk_OBJECTS = \
 "CMakeFiles/Sakk.dir/jatekallas.cpp.obj" \
 "CMakeFiles/Sakk.dir/lepes.cpp.obj" \
 "CMakeFiles/Sakk.dir/poz.cpp.obj" \
-"CMakeFiles/Sakk.dir/tabla.cpp.obj"
+"CMakeFiles/Sakk.dir/tabla.cpp.obj" \
+"CMakeFiles/Sakk.dir/szamolo.cpp.obj"
 
 # External object files for target Sakk
 Sakk_EXTERNAL_OBJECTS =
@@ -174,10 +196,13 @@ Sakk.exe: CMakeFiles/Sakk.dir/jatekallas.cpp.obj
 Sakk.exe: CMakeFiles/Sakk.dir/lepes.cpp.obj
 Sakk.exe: CMakeFiles/Sakk.dir/poz.cpp.obj
 Sakk.exe: CMakeFiles/Sakk.dir/tabla.cpp.obj
+Sakk.exe: CMakeFiles/Sakk.dir/szamolo.cpp.obj
 Sakk.exe: CMakeFiles/Sakk.dir/build.make
+Sakk.exe: C:/Users/Gabi/vcpkg/installed/x64-windows/debug/lib/SDL2d.lib
+Sakk.exe: C:/Users/Gabi/vcpkg/installed/x64-windows/debug/lib/manual-link/SDL2maind.lib
 Sakk.exe: CMakeFiles/Sakk.dir/linkLibs.rsp
 Sakk.exe: CMakeFiles/Sakk.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Sakk.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Sakk.exe"
 	"C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/Sakk.dir/objects.a
 	C:/msys64/mingw64/bin/ar.exe qc CMakeFiles/Sakk.dir/objects.a @CMakeFiles/Sakk.dir/objects1.rsp
 	C:/msys64/mingw64/bin/c++.exe -g -Wl,--whole-archive CMakeFiles/Sakk.dir/objects.a -Wl,--no-whole-archive -o Sakk.exe -Wl,--out-implib,libSakk.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/Sakk.dir/linkLibs.rsp

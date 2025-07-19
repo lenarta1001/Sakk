@@ -3,6 +3,7 @@
 #include "poz.h"
 #include "jatekos.h"
 #include "szamolo.h"
+#include "eltolas.h"
 
 Tabla::Tabla() : tabla(8, std::vector<Babu*>(8, 0))  {
     for (int i = 0; i < 8; i++)
@@ -20,12 +21,20 @@ Babu*& Tabla::operator[](const Poz& p) {
     return tabla[p.get_sor()][p.get_oszlop()];
 }
 
+Babu* Tabla::operator()(unsigned s, unsigned o) const {
+    return tabla[s][o];
+}
+
 Babu* Tabla::operator[](const Poz& p) const {
     return tabla[p.get_sor()][p.get_oszlop()];
 }
 
+Babu*& Tabla::operator()(unsigned s, unsigned o)  {
+    return tabla[s][o];
+}
 
-void Tabla::init() {
+void Tabla::init()
+{
     tabla[0][0] = new Bastya(fekete);
     tabla[0][1] = new Huszar(fekete);
     tabla[0][2] = new Futo(fekete);
@@ -161,6 +170,51 @@ Poz Tabla::holvan(BabuTipus babutipus, const Szin& szin) {
             return poz;
     }
     return Poz();
+}
+
+bool Tabla::kiralyoldali_sanc_jog(const Jatekos &j) const {
+    unsigned kezdosor = j.szin == feher ? 7 : 0;
+    if (ures(kezdosor, 4) || ures(kezdosor, 7))
+        return false;
+    
+    return !operator()(kezdosor, 4)->get_mozgott() && !operator()(kezdosor, 7)->get_mozgott();
+}
+
+bool Tabla::kiralynooldali_sanc_jog(const Jatekos &j) const {
+    unsigned kezdosor = j.szin == feher ? 7 : 0;
+    if (ures(kezdosor, 4) || ures(kezdosor, 0))
+        return false;
+    
+    return !operator()(kezdosor, 4)->get_mozgott() && !operator()(kezdosor, 0)->get_mozgott();
+}
+
+bool Tabla::enpassant_jog(const Jatekos &j) const {
+    Poz atugrott = get_atugrott_pozicio(j.ellenfel());
+    if (atugrott.get_oszlop() >= 9 && atugrott.get_sor() >= 9) {
+        return false;
+    }
+    Poz lehetseges_uto_poziciok[2];
+    if (j.szin() == feher) {
+        lehetseges_uto_poziciok[0] = atugrott + Eltolas::delkelet;
+        lehetseges_uto_poziciok[1] = atugrott + Eltolas::delnyugat;
+    } else {
+        lehetseges_uto_poziciok[0] = atugrott + Eltolas::eszakkelet;
+        lehetseges_uto_poziciok[1] = atugrott + Eltolas::eszaknyugat;
+    }
+
+    for (auto poz : lehetseges_uto_poziciok) {
+        if (!benne_van(poz) || ures(poz)) {
+            continue;
+        }
+        const Babu* babu = operator[](poz);
+        if (babu->get_szin() == j.szin && babu->get_tipus() == paraszt) {
+            EnPassant lepes(poz);
+            if (lepes.ervenyes(*this))
+                return true;
+        }
+    }
+
+    return false;
 }
 
 Tabla::Tabla(const Tabla& t) : tabla(8, std::vector<Babu*>(8, 0)) {

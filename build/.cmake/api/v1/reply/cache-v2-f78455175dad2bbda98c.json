@@ -1270,6 +1270,18 @@
 			"value" : "CMAKE_TAPI-NOTFOUND"
 		},
 		{
+			"name" : "CMAKE_TOOLCHAIN_FILE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "C:/Users/Gabi/vcpkg/scripts/buildsystems/vcpkg.cmake"
+		},
+		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
 			"properties" : 
 			[
@@ -1320,6 +1332,18 @@
 			],
 			"type" : "STATIC",
 			"value" : "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk"
+		},
+		{
+			"name" : "SDL2_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for SDL2."
+				}
+			],
+			"type" : "PATH",
+			"value" : "SDL2_DIR-NOTFOUND"
 		},
 		{
 			"name" : "Sakk_BINARY_DIR",

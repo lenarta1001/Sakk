@@ -16,6 +16,7 @@ public:
     virtual Lepes* copy() = 0;
     virtual void elvegez(Tabla& tabla) const = 0;
     virtual bool ervenyes(Tabla& tabla) const;
+    virtual bool parasztlepes_utes(Tabla& tabla) const = 0;
     virtual ~Lepes() {}
 };
 
@@ -24,6 +25,7 @@ public:
     NormalLepes(const Poz& k, const Poz& v) : Lepes(k, v) {}
     Lepes* copy() { return new NormalLepes(kezdo, veg); }
     void elvegez(Tabla& tabla) const;
+    bool parasztlepes_utes(Tabla& tabla) const;
     ~NormalLepes() {}
 };
 
@@ -33,6 +35,7 @@ public:
     DuplaLepes(const Poz& k, const Poz& v) : Lepes(k, v), atugrott((k.get_sor() + v.get_sor()) / 2, k.get_oszlop()) {}
     Lepes* copy() { return new DuplaLepes(kezdo, veg); }
     void elvegez(Tabla& tabla) const;
+    bool parasztlepes_utes(Tabla& tabla) const;
     ~DuplaLepes() {}
 };
 
@@ -43,6 +46,7 @@ public:
     ParasztAtvaltozas(const ParasztAtvaltozas& p);
     Lepes* copy();
     void elvegez(Tabla& tabla) const;
+    bool parasztlepes_utes(Tabla& tabla) const;
     ~ParasztAtvaltozas();
 };
 
@@ -55,6 +59,7 @@ public:
     Lepes* copy() { return new KiralyOldaliSanc(kezdo); }
     void elvegez(Tabla& tabla) const;
     bool ervenyes(Tabla& tabla) const;
+    bool parasztlepes_utes(Tabla& tabla) const;
     ~KiralyOldaliSanc() {}
 };
 
@@ -67,6 +72,7 @@ public:
     Lepes* copy() { return new KiralynoOldaliSanc(kezdo); }
     void elvegez(Tabla& tabla) const;
     bool ervenyes(Tabla& tabla) const;
+    bool parasztlepes_utes(Tabla& tabla) const;
     ~KiralynoOldaliSanc() {}
 };
 
@@ -76,6 +82,7 @@ public:
     EnPassant(const Poz& k, const Poz& v) : Lepes(k, v), leutott_poz(k.get_sor(), v.get_oszlop()) {}
     Lepes* copy() { return new EnPassant(kezdo, veg); }
     void elvegez(Tabla& tabla) const;
+    bool parasztlepes_utes(Tabla& tabla) const;
     ~EnPassant() {}
 };
 

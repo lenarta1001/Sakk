@@ -1,38 +1,44 @@
 [
 {
   "directory": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build",
-  "command": "C:/msys64/mingw64/bin/c++.exe   -g -std=gnu++17 -o CMakeFiles/Sakk.dir/babu.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.cpp",
+  "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/Sakk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/Sakk.dir/babu.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.cpp",
   "file": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.cpp",
   "output": "CMakeFiles/Sakk.dir/babu.cpp.obj"
 },
 {
   "directory": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build",
-  "command": "C:/msys64/mingw64/bin/c++.exe   -g -std=gnu++17 -o CMakeFiles/Sakk.dir/eltolas.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.cpp",
+  "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/Sakk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/Sakk.dir/eltolas.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.cpp",
   "file": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.cpp",
   "output": "CMakeFiles/Sakk.dir/eltolas.cpp.obj"
 },
 {
   "directory": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build",
-  "command": "C:/msys64/mingw64/bin/c++.exe   -g -std=gnu++17 -o CMakeFiles/Sakk.dir/jatekallas.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekallas.cpp",
+  "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/Sakk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/Sakk.dir/jatekallas.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekallas.cpp",
   "file": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekallas.cpp",
   "output": "CMakeFiles/Sakk.dir/jatekallas.cpp.obj"
 },
 {
   "directory": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build",
-  "command": "C:/msys64/mingw64/bin/c++.exe   -g -std=gnu++17 -o CMakeFiles/Sakk.dir/lepes.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.cpp",
+  "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/Sakk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/Sakk.dir/lepes.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.cpp",
   "file": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.cpp",
   "output": "CMakeFiles/Sakk.dir/lepes.cpp.obj"
 },
 {
   "directory": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build",
-  "command": "C:/msys64/mingw64/bin/c++.exe   -g -std=gnu++17 -o CMakeFiles/Sakk.dir/poz.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.cpp",
+  "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/Sakk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/Sakk.dir/poz.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.cpp",
   "file": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.cpp",
   "output": "CMakeFiles/Sakk.dir/poz.cpp.obj"
 },
 {
   "directory": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build",
-  "command": "C:/msys64/mingw64/bin/c++.exe   -g -std=gnu++17 -o CMakeFiles/Sakk.dir/tabla.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.cpp",
+  "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/Sakk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/Sakk.dir/tabla.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.cpp",
   "file": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.cpp",
   "output": "CMakeFiles/Sakk.dir/tabla.cpp.obj"
+},
+{
+  "directory": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build",
+  "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/Sakk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/Sakk.dir/szamolo.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.cpp",
+  "file": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.cpp",
+  "output": "CMakeFiles/Sakk.dir/szamolo.cpp.obj"
 }
 ]

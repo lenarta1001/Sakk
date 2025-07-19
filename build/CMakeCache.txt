@@ -236,6 +236,9 @@ CMAKE_STRIP:FILEPATH=C:/msys64/mingw64/bin/strip.exe
 //Path to a program.
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=C:/Users/Gabi/vcpkg/scripts/buildsystems/vcpkg.cmake
+
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual
@@ -250,6 +253,9 @@ MyProject_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 MyProject_SOURCE_DIR:STATIC=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk
+
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=SDL2_DIR-NOTFOUND
 
 //Value Computed by CMake
 Sakk_BINARY_DIR:STATIC=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build

@@ -249,6 +249,30 @@ poz.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/poz.cpp.s
 .PHONY : poz.cpp.s
 
+szamolo.obj: szamolo.cpp.obj
+.PHONY : szamolo.obj
+
+# target to build an object file
+szamolo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/szamolo.cpp.obj
+.PHONY : szamolo.cpp.obj
+
+szamolo.i: szamolo.cpp.i
+.PHONY : szamolo.i
+
+# target to preprocess a source file
+szamolo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/szamolo.cpp.i
+.PHONY : szamolo.cpp.i
+
+szamolo.s: szamolo.cpp.s
+.PHONY : szamolo.s
+
+# target to generate assembly for a file
+szamolo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/szamolo.cpp.s
+.PHONY : szamolo.cpp.s
+
 tabla.obj: tabla.cpp.obj
 .PHONY : tabla.obj
 
@@ -297,6 +321,9 @@ help:
 	@echo "... poz.obj"
 	@echo "... poz.i"
 	@echo "... poz.s"
+	@echo "... szamolo.obj"
+	@echo "... szamolo.i"
+	@echo "... szamolo.s"
 	@echo "... tabla.obj"
 	@echo "... tabla.i"
 	@echo "... tabla.s"

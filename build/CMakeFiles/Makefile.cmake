@@ -20,6 +20,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-3.31/Modules/Compiler/GNU-C.cmake"
   "C:/Program Files/CMake/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake"
   "C:/Program Files/CMake/share/cmake-3.31/Modules/Compiler/GNU.cmake"
+  "C:/Program Files/CMake/share/cmake-3.31/Modules/FeatureSummary.cmake"
   "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake"
   "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake"
   "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake"
@@ -44,6 +45,15 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.31.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.4/CMakeRCCompiler.cmake"
   "CMakeFiles/3.31.4/CMakeSystem.cmake"
+  "C:/Users/Gabi/vcpkg/installed/x64-windows/share/sdl2/SDL2Config.cmake"
+  "C:/Users/Gabi/vcpkg/installed/x64-windows/share/sdl2/SDL2ConfigVersion.cmake"
+  "C:/Users/Gabi/vcpkg/installed/x64-windows/share/sdl2/SDL2Targets-debug.cmake"
+  "C:/Users/Gabi/vcpkg/installed/x64-windows/share/sdl2/SDL2Targets-release.cmake"
+  "C:/Users/Gabi/vcpkg/installed/x64-windows/share/sdl2/SDL2Targets.cmake"
+  "C:/Users/Gabi/vcpkg/installed/x64-windows/share/sdl2/SDL2mainTargets-debug.cmake"
+  "C:/Users/Gabi/vcpkg/installed/x64-windows/share/sdl2/SDL2mainTargets-release.cmake"
+  "C:/Users/Gabi/vcpkg/installed/x64-windows/share/sdl2/SDL2mainTargets.cmake"
+  "C:/Users/Gabi/vcpkg/installed/x64-windows/share/sdl2/sdlfind.cmake"
   )
 
 # The corresponding makefile is:

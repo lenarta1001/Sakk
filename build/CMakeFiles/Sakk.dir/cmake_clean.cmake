@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Sakk.dir/lepes.cpp.obj.d"
   "CMakeFiles/Sakk.dir/poz.cpp.obj"
   "CMakeFiles/Sakk.dir/poz.cpp.obj.d"
+  "CMakeFiles/Sakk.dir/szamolo.cpp.obj"
+  "CMakeFiles/Sakk.dir/szamolo.cpp.obj.d"
   "CMakeFiles/Sakk.dir/tabla.cpp.obj"
   "CMakeFiles/Sakk.dir/tabla.cpp.obj.d"
   "Sakk.exe"

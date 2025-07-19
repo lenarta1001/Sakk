@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekallas.cpp" "CMakeFiles/Sakk.dir/jatekallas.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/jatekallas.cpp.obj.d"
   "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.cpp" "CMakeFiles/Sakk.dir/lepes.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/lepes.cpp.obj.d"
   "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.cpp" "CMakeFiles/Sakk.dir/poz.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/poz.cpp.obj.d"
+  "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.cpp" "CMakeFiles/Sakk.dir/szamolo.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/szamolo.cpp.obj.d"
   "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.cpp" "CMakeFiles/Sakk.dir/tabla.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/tabla.cpp.obj.d"
   )
 

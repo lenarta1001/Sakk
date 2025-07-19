@@ -21,6 +21,8 @@ public:
     Tabla(const Tabla&);
     Babu* operator[](const Poz& p) const;
     Babu*& operator[](const Poz& p);
+    Babu* operator() (unsigned s, unsigned o) const;
+    Babu*& operator() (unsigned s, unsigned o);
     void init();
     void set_atugrott_pozicio(const Jatekos& j, Poz p);
     void del_atugrott_pozicio(const Jatekos& j);
@@ -38,6 +40,10 @@ public:
     bool KiralyvsKiralyHuszar();
     bool KiralyFutovsKiralyFuto();
     Poz holvan(BabuTipus babutipus, const Szin& szin);
+    bool kiralyoldali_sanc_jog(const Jatekos &j) const;
+    bool kiralynooldali_sanc_jog(const Jatekos &j) const;
+    bool enpassant_jog(const Jatekos& j) const;
+
     ~Tabla();
 };
 #endif // TABLA_H

@@ -20,6 +20,11 @@ Lepesek JatekAllas::ervenyes_lepesek(const Poz& p) {
 void JatekAllas::lep(Lepes* l) {
     tabla.del_atugrott_pozicio(akt_jatekos);
     l->elvegez(tabla);
+    if (l->parasztlepes_utes())
+        otvenlepes_szabaly_szamlalo = 0;
+    else
+        otvenlepes_szabaly_szamlalo++;
+    
     akt_jatekos = akt_jatekos.ellenfel();
     vege_ellenorzes();
 }
@@ -44,5 +49,8 @@ void JatekAllas::vege_ellenorzes() {
     } else if (tabla.elegtelen_anyag()) {
         vege = true;
         eredmeny = Eredmeny(none, "elegtelen anyag");
+    } else if (otvenlepes_szabaly_szamlalo >= 100) {
+        vege = true;
+        eredmeny = Eredmeny(none, "otvenlepeses-szabaly");
     }
 }
