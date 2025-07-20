@@ -33,30 +33,32 @@ Babu*& Tabla::operator()(unsigned s, unsigned o)  {
     return tabla[s][o];
 }
 
-void Tabla::init()
+Tabla Tabla::init()
 {
-    tabla[0][0] = new Bastya(fekete);
-    tabla[0][1] = new Huszar(fekete);
-    tabla[0][2] = new Futo(fekete);
-    tabla[0][3] = new Kiralyno(fekete);
-    tabla[0][4] = new Kiraly(fekete);
-    tabla[0][5] = new Futo(fekete);
-    tabla[0][6] = new Huszar(fekete);
-    tabla[0][7] = new Huszar(fekete);
+    Tabla tabla;
+    tabla.tabla[0][0] = new Bastya(fekete);
+    tabla.tabla[0][1] = new Huszar(fekete);
+    tabla.tabla[0][2] = new Futo(fekete);
+    tabla.tabla[0][3] = new Kiralyno(fekete);
+    tabla.tabla[0][4] = new Kiraly(fekete);
+    tabla.tabla[0][5] = new Futo(fekete);
+    tabla.tabla[0][6] = new Huszar(fekete);
+    tabla.tabla[0][7] = new Huszar(fekete);
 
-    tabla[7][0] = new Bastya(feher);
-    tabla[7][1] = new Huszar(feher);
-    tabla[7][2] = new Futo(feher);
-    tabla[7][3] = new Kiralyno(feher);
-    tabla[7][4] = new Kiraly(feher);
-    tabla[7][5] = new Futo(feher);
-    tabla[7][6] = new Huszar(feher);
-    tabla[7][7] = new Huszar(feher);
+    tabla.tabla[7][0] = new Bastya(feher);
+    tabla.tabla[7][1] = new Huszar(feher);
+    tabla.tabla[7][2] = new Futo(feher);
+    tabla.tabla[7][3] = new Kiralyno(feher);
+    tabla.tabla[7][4] = new Kiraly(feher);
+    tabla.tabla[7][5] = new Futo(feher);
+    tabla.tabla[7][6] = new Huszar(feher);
+    tabla.tabla[7][7] = new Huszar(feher);
 
     for (int i = 0; i < 8; i++) {
-        tabla[1][i] = new Paraszt(fekete);
-        tabla[6][i] = new Paraszt(feher);
+        tabla.tabla[1][i] = new Paraszt(fekete);
+        tabla.tabla[6][i] = new Paraszt(feher);
     }
+    return tabla;
 }
 
 void Tabla::set_atugrott_pozicio(const Jatekos &j, Poz poz) {
@@ -219,7 +221,11 @@ bool Tabla::enpassant_jog(const Jatekos &j) {
 
 Tabla::Tabla(const Tabla& t) : tabla(8, std::vector<Babu*>(8, 0)) {
     for (size_t i = 0; i < 8; i++) {
-        for (int j = 0; j < 8; j++)
-            this->tabla[i][j] = t.tabla[i][j]->copy();
+        for (int j = 0; j < 8; j++) {
+            if (!ures(Poz(i, j)))
+                this->tabla[i][j] = t.tabla[i][j]->copy();
+            else
+                this->tabla[i][j] = nullptr;
+        }
     }
 }

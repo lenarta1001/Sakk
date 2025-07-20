@@ -85,12 +85,12 @@ clean: CMakeFiles/Sakk.dir/clean
 CMakeFiles/Sakk.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target Sakk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target Sakk"
 .PHONY : CMakeFiles/Sakk.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Sakk.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Sakk.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles 0
 .PHONY : CMakeFiles/Sakk.dir/rule
@@ -102,7 +102,7 @@ Sakk: CMakeFiles/Sakk.dir/rule
 # codegen rule for target.
 CMakeFiles/Sakk.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Finished codegen for target Sakk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Finished codegen for target Sakk"
 .PHONY : CMakeFiles/Sakk.dir/codegen
 
 # clean rule for target.

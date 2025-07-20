@@ -23,7 +23,7 @@ public:
     Babu*& operator[](const Poz& p);
     Babu* operator() (unsigned s, unsigned o) const;
     Babu*& operator() (unsigned s, unsigned o);
-    void init();
+    static Tabla init();
     void set_atugrott_pozicio(const Jatekos& j, Poz p);
     void del_atugrott_pozicio(const Jatekos& j);
     Poz& get_atugrott_pozicio(const Jatekos& j);

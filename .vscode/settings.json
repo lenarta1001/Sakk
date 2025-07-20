@@ -66,12 +66,17 @@
         "text_encoding": "cpp",
         "variant": "cpp",
         "map": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "cstdarg": "cpp",
+        "sstream": "cpp",
+        "cinttypes": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "cmake.generator": "Ninja",
     "cmake.sourceDirectory": "${workspaceFolder}",
     "cmake.configureSettings": {
-        "CMAKE_TOOLCHAIN_FILE": "C:/Users/Gabi/vcpkg/scripts/buildsystems/vcpkg.cmake"
+        "CMAKE_TOOLCHAIN_FILE": "C:/Users/Gabi/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "CMAKE_PREFIX_PATH": "C:/Users/Gabi/vcpkg/installed/x64-windows",
+        "VCPKG_TARGET_TRIPLET": "x64-mingw-dynamic"
     }
 }

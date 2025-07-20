@@ -254,8 +254,29 @@ MyProject_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 MyProject_SOURCE_DIR:STATIC=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk
 
+//Path to a library.
+PNG_LIBRARY_DEBUG:FILEPATH=PNG_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+PNG_LIBRARY_RELEASE:FILEPATH=C:/Users/Gabi/vcpkg/installed/x64-windows/lib/libpng16.lib
+
+//Path to a file.
+PNG_PNG_INCLUDE_DIR:PATH=C:/Users/Gabi/vcpkg/installed/x64-windows/include
+
 //The directory containing a CMake configuration file for SDL2.
-SDL2_DIR:PATH=SDL2_DIR-NOTFOUND
+SDL2_DIR:PATH=C:/Users/Gabi/vcpkg/installed/x64-mingw-dynamic/share/sdl2
+
+//The directory containing a CMake configuration file for SDL2_gfx.
+SDL2_gfx_DIR:PATH=C:/Users/Gabi/vcpkg/installed/x64-windows/share/SDL2_gfx
+
+//The directory containing a CMake configuration file for SDL2_image.
+SDL2_image_DIR:PATH=C:/Users/Gabi/vcpkg/installed/x64-mingw-dynamic/share/SDL2_image
+
+//The directory containing a CMake configuration file for SDL2_ttf.
+SDL2_ttf_DIR:PATH=C:/Users/Gabi/vcpkg/installed/x64-mingw-dynamic/share/SDL2_ttf
+
+//The directory containing a CMake configuration file for SDL_2_gfx.
+SDL_2_gfx_DIR:PATH=SDL_2_gfx_DIR-NOTFOUND
 
 //Value Computed by CMake
 Sakk_BINARY_DIR:STATIC=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build
@@ -265,6 +286,18 @@ Sakk_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Sakk_SOURCE_DIR:STATIC=C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk
+
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=C:/Users/Gabi/vcpkg/installed/x64-windows/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=C:/Users/Gabi/vcpkg/installed/x64-windows/lib/zlib.lib
+
+//The directory containing a CMake configuration file for sdl2-gfx.
+sdl2-gfx_DIR:PATH=C:/Users/Gabi/vcpkg/installed/x64-mingw-dynamic/share/sdl2-gfx
 
 
 ########################
@@ -429,6 +462,22 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding PNG
+FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[C:/Users/Gabi/vcpkg/installed/x64-windows/lib/libpng16.lib][C:/Users/Gabi/vcpkg/installed/x64-windows/include][v1.6.48()]
+//Details about finding ZLIB
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[C:/Users/Gabi/vcpkg/installed/x64-windows/lib/zlib.lib][C:/Users/Gabi/vcpkg/installed/x64-windows/include][c ][v1.3.1()]
+//ADVANCED property for variable: PNG_LIBRARY_DEBUG
+PNG_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PNG_LIBRARY_RELEASE
+PNG_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PNG_PNG_INCLUDE_DIR
+PNG_PNG_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //linker supports push/pop state

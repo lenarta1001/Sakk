@@ -1,1 +1,1 @@
--isystem "C:/Users/Gabi/vcpkg/installed/x64-windows/include" -isystem "C:/Users/Gabi/vcpkg/installed/x64-windows/include/SDL2"
+-isystem "C:/Users/Gabi/vcpkg/installed/x64-mingw-dynamic/include" -isystem "C:/Users/Gabi/vcpkg/installed/x64-mingw-dynamic/include/SDL2"

@@ -129,6 +129,30 @@ Sakk/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/build
 .PHONY : Sakk/fast
 
+ablak.obj: ablak.cpp.obj
+.PHONY : ablak.obj
+
+# target to build an object file
+ablak.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/ablak.cpp.obj
+.PHONY : ablak.cpp.obj
+
+ablak.i: ablak.cpp.i
+.PHONY : ablak.i
+
+# target to preprocess a source file
+ablak.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/ablak.cpp.i
+.PHONY : ablak.cpp.i
+
+ablak.s: ablak.cpp.s
+.PHONY : ablak.s
+
+# target to generate assembly for a file
+ablak.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/ablak.cpp.s
+.PHONY : ablak.cpp.s
+
 babu.obj: babu.cpp.obj
 .PHONY : babu.obj
 
@@ -177,6 +201,30 @@ eltolas.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/eltolas.cpp.s
 .PHONY : eltolas.cpp.s
 
+fenstring.obj: fenstring.cpp.obj
+.PHONY : fenstring.obj
+
+# target to build an object file
+fenstring.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/fenstring.cpp.obj
+.PHONY : fenstring.cpp.obj
+
+fenstring.i: fenstring.cpp.i
+.PHONY : fenstring.i
+
+# target to preprocess a source file
+fenstring.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/fenstring.cpp.i
+.PHONY : fenstring.cpp.i
+
+fenstring.s: fenstring.cpp.s
+.PHONY : fenstring.s
+
+# target to generate assembly for a file
+fenstring.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/fenstring.cpp.s
+.PHONY : fenstring.cpp.s
+
 jatekallas.obj: jatekallas.cpp.obj
 .PHONY : jatekallas.obj
 
@@ -224,6 +272,30 @@ lepes.s: lepes.cpp.s
 lepes.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/lepes.cpp.s
 .PHONY : lepes.cpp.s
+
+main.obj: main.cpp.obj
+.PHONY : main.obj
+
+# target to build an object file
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/main.cpp.obj
+.PHONY : main.cpp.obj
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sakk.dir/build.make CMakeFiles/Sakk.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 poz.obj: poz.cpp.obj
 .PHONY : poz.obj
@@ -306,18 +378,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Sakk"
+	@echo "... ablak.obj"
+	@echo "... ablak.i"
+	@echo "... ablak.s"
 	@echo "... babu.obj"
 	@echo "... babu.i"
 	@echo "... babu.s"
 	@echo "... eltolas.obj"
 	@echo "... eltolas.i"
 	@echo "... eltolas.s"
+	@echo "... fenstring.obj"
+	@echo "... fenstring.i"
+	@echo "... fenstring.s"
 	@echo "... jatekallas.obj"
 	@echo "... jatekallas.i"
 	@echo "... jatekallas.s"
 	@echo "... lepes.obj"
 	@echo "... lepes.i"
 	@echo "... lepes.s"
+	@echo "... main.obj"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... poz.obj"
 	@echo "... poz.i"
 	@echo "... poz.s"

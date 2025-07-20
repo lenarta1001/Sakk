@@ -195,7 +195,3 @@ bool Paraszt::uti_a_kiralyt(const Poz& poz, Tabla& tabla) const {
     }
     return false;
 }
-
-int main() {
-    return 0;
-}

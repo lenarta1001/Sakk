@@ -8,10 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/ablak.cpp" "CMakeFiles/Sakk.dir/ablak.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/ablak.cpp.obj.d"
   "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.cpp" "CMakeFiles/Sakk.dir/babu.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/babu.cpp.obj.d"
   "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.cpp" "CMakeFiles/Sakk.dir/eltolas.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/eltolas.cpp.obj.d"
+  "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/fenstring.cpp" "CMakeFiles/Sakk.dir/fenstring.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/fenstring.cpp.obj.d"
   "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/jatekallas.cpp" "CMakeFiles/Sakk.dir/jatekallas.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/jatekallas.cpp.obj.d"
   "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/lepes.cpp" "CMakeFiles/Sakk.dir/lepes.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/lepes.cpp.obj.d"
+  "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/main.cpp" "CMakeFiles/Sakk.dir/main.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/main.cpp.obj.d"
   "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.cpp" "CMakeFiles/Sakk.dir/poz.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/poz.cpp.obj.d"
   "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.cpp" "CMakeFiles/Sakk.dir/szamolo.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/szamolo.cpp.obj.d"
   "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/tabla.cpp" "CMakeFiles/Sakk.dir/tabla.cpp.obj" "gcc" "CMakeFiles/Sakk.dir/tabla.cpp.obj.d"

@@ -40,5 +40,23 @@
   "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/Sakk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/Sakk.dir/szamolo.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.cpp",
   "file": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szamolo.cpp",
   "output": "CMakeFiles/Sakk.dir/szamolo.cpp.obj"
+},
+{
+  "directory": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build",
+  "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/Sakk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/Sakk.dir/ablak.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/ablak.cpp",
+  "file": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/ablak.cpp",
+  "output": "CMakeFiles/Sakk.dir/ablak.cpp.obj"
+},
+{
+  "directory": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build",
+  "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/Sakk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/Sakk.dir/fenstring.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/fenstring.cpp",
+  "file": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/fenstring.cpp",
+  "output": "CMakeFiles/Sakk.dir/fenstring.cpp.obj"
+},
+{
+  "directory": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/build",
+  "command": "C:/msys64/mingw64/bin/c++.exe  @CMakeFiles/Sakk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/Sakk.dir/main.cpp.obj -c C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/main.cpp",
+  "file": "C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/main.cpp",
+  "output": "CMakeFiles/Sakk.dir/main.cpp.obj"
 }
 ]
