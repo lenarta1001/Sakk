@@ -14,14 +14,14 @@ void JatekAllas::fenstring_frissit() {
 
 Lepesek JatekAllas::ervenyes_lepesek(const Poz &p)
 {
-    if (!tabla.benne_van(p) || tabla[p]->get_szin() != akt_jatekos.szin) {
+    if (!tabla.benne_van(p) || tabla.ures(p) || tabla[p]->get_szin() != akt_jatekos.szin) {
         return Lepesek(0);
     }
     Lepesek lehetseges_lepesek = tabla[p]->lepesek(p, tabla);
     Lepesek valid_lepesek;
-    for (size_t i = 0; i < lehetseges_lepesek.size(); i++) {
-        if (lehetseges_lepesek[i]->ervenyes(tabla))
-            valid_lepesek.push_back(lehetseges_lepesek[i]);
+    for (auto& lepes : lehetseges_lepesek) {
+        if (lepes->ervenyes(tabla))
+            valid_lepesek.push_back(lepes->copy());
     }
     return valid_lepesek;
 }
@@ -45,7 +45,9 @@ Lepesek JatekAllas::osszes_ervenyes_lepes(const Jatekos &jatekos) {
     Lepesek osszes;
     for (auto poz : poziciok) {
         Lepesek egy_babu_lepesei = ervenyes_lepesek(poz);
-        osszes.insert(osszes.end(), egy_babu_lepesei.begin(), egy_babu_lepesei.end());
+        for (auto& lepes : egy_babu_lepesei) {
+            osszes.push_back(lepes->copy());
+        }
     }
     return osszes;
 }

@@ -14,7 +14,7 @@ Lepesek Paraszt::elore_lepesek(const Poz &kezdo, Tabla &tabla) const {
     Poz kovetkezo = kezdo + irany;
 
     if (tabla.benne_van(kovetkezo) && tabla.ures(kovetkezo)) {
-        if (kovetkezo.get_sor() == 0 || kovetkezo.get_sor() == 7) {
+        if (kovetkezo.sor == 0 || kovetkezo.sor == 7) {
             elerhetok.push_back(new ParasztAtvaltozas(kezdo, kovetkezo, new Kiralyno(get_szin(), true)));
             elerhetok.push_back(new ParasztAtvaltozas(kezdo, kovetkezo, new Futo(get_szin(), true)));
             elerhetok.push_back(new ParasztAtvaltozas(kezdo, kovetkezo, new Huszar(get_szin(), true)));
@@ -41,7 +41,7 @@ Lepesek Paraszt::atlos_lepesek(const Poz &kezdo, Tabla &tabla) const {
         if (tabla.get_atugrott_pozicio(Jatekos(szin).ellenfel()) == atlos) {
             elerhetok.push_back(new EnPassant(kezdo, atlos));
         } else if (tabla.benne_van(atlos) && !tabla.ures(atlos) && tabla[atlos]->get_szin() != szin) {
-            if (atlos.get_sor() == 0 || atlos.get_sor() == 7) {
+            if (atlos.sor == 0 || atlos.sor == 7) {
                 elerhetok.push_back(new ParasztAtvaltozas(kezdo, atlos, new Kiralyno(get_szin(), true)));
                 elerhetok.push_back(new ParasztAtvaltozas(kezdo, atlos, new Futo(get_szin(), true)));
                 elerhetok.push_back(new ParasztAtvaltozas(kezdo, atlos, new Huszar(get_szin(), true)));
@@ -60,8 +60,12 @@ Lepesek Paraszt::lepesek(const Poz &kezdo, Tabla &tabla) const {
     Lepesek atlosan = atlos_lepesek(kezdo, tabla);
     Lepesek osszes;
 
-    osszes.insert(osszes.end(), elore.begin(), elore.end());
-    osszes.insert(osszes.end(), atlosan.begin(), atlosan.end());
+    for (auto& lepes : elore) {
+        osszes.push_back(lepes->copy());
+    }
+    for (auto& lepes : atlosan) {
+        osszes.push_back(lepes->copy());
+    }  
 
     return osszes;
 }
@@ -70,12 +74,13 @@ Lepesek Bastya::lepesek(const Poz &kezdo, Tabla &tabla) const {
     Lepesek elerhetok;
     Eltolas iranyok[4] = {Eltolas::eszak, Eltolas::kelet, Eltolas::del, Eltolas::nyugat};
 
-    for (int i = 0; i < 4; i++) {
-        for (Poz p = kezdo + iranyok[i]; tabla.benne_van(p); p += iranyok[i]) {
+    for (auto irany : iranyok) {
+        for (Poz p = kezdo + irany; tabla.benne_van(p); p += irany) {
             if (tabla.ures(p)) {
                 elerhetok.push_back(new NormalLepes(kezdo, p));
             } else if (tabla[p]->get_szin()  != szin) {
                 elerhetok.push_back(new NormalLepes(kezdo, p));
+                break;
             } else {
                 break;
             }
@@ -89,12 +94,13 @@ Lepesek Futo::lepesek(const Poz& kezdo, Tabla& tabla) const {
     Lepesek elerhetok;
     Eltolas iranyok[4] = {Eltolas::eszakkelet, Eltolas::delkelet, Eltolas::delnyugat, Eltolas::eszaknyugat};
 
-    for (int i = 0; i < 4; i++) {
-        for (Poz p = kezdo + iranyok[i]; tabla.benne_van(p); p += iranyok[i]) {
+    for (auto irany : iranyok) {
+        for (Poz p = kezdo + irany; tabla.benne_van(p); p += irany) {
             if (tabla.ures(p)) {
                 elerhetok.push_back(new NormalLepes(kezdo, p));
             } else if (tabla[p]->get_szin() != szin) {
                 elerhetok.push_back(new NormalLepes(kezdo, p));
+                break;
             } else {
                 break;
             }
@@ -108,12 +114,13 @@ Lepesek Kiralyno::lepesek(const Poz& kezdo, Tabla& tabla) const {
     Lepesek elerhetok;
     Eltolas iranyok[8] = {Eltolas::eszak, Eltolas::eszakkelet, Eltolas::kelet, Eltolas::delkelet, Eltolas::del, Eltolas::delnyugat, Eltolas::nyugat, Eltolas::eszaknyugat};
 
-    for (int i = 0; i < 8; i++) {
-        for (Poz p = kezdo + iranyok[i]; tabla.benne_van(p); p += iranyok[i]) {
+    for (auto irany : iranyok) {
+        for (Poz p = kezdo + irany; tabla.benne_van(p); p += irany) {
             if (tabla.ures(p)) {
                 elerhetok.push_back(new NormalLepes(kezdo, p));
             } else if (tabla[p]->get_szin() != szin) {
                 elerhetok.push_back(new NormalLepes(kezdo, p));
+                break;
             } else {
                 break;
             }
@@ -125,17 +132,17 @@ Lepesek Kiralyno::lepesek(const Poz& kezdo, Tabla& tabla) const {
 
 Lepesek Huszar::lepesek(const Poz& kezdo, Tabla& tabla) const {
     Lepesek elerhetok;
-    Eltolas vizszintes[2] = {Eltolas::kelet, Eltolas::nyugat};
-    Eltolas fuggoleges[2] = {Eltolas::eszak, Eltolas::del};
+    Eltolas vizszintesek[2] = {Eltolas::kelet, Eltolas::nyugat};
+    Eltolas fuggolegesek[2] = {Eltolas::eszak, Eltolas::del};
 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            Poz veg = kezdo + vizszintes[i] * 2 + fuggoleges[j];
+    for (auto vizszintes : vizszintesek) {
+        for (auto fuggoleges : fuggolegesek) {
+            Poz veg = kezdo + vizszintes * 2 + fuggoleges;
             if (tabla.benne_van(veg) && (tabla.ures(veg) || tabla[veg]->get_szin() != szin)) {
                 elerhetok.push_back(new NormalLepes(kezdo, veg));
             }
 
-            veg = kezdo + fuggoleges[i] * 2 + vizszintes[j];
+            veg = kezdo + fuggoleges * 2 + vizszintes;
             if (tabla.benne_van(veg) && (tabla.ures(veg) || tabla[veg]->get_szin() != szin)) {
                 elerhetok.push_back(new NormalLepes(kezdo, veg));
             }
@@ -147,13 +154,13 @@ Lepesek Huszar::lepesek(const Poz& kezdo, Tabla& tabla) const {
 Lepesek Kiraly::lepesek(const Poz& kezdo, Tabla& tabla) const {
     Lepesek elerhetok;
     Eltolas iranyok[8] = {Eltolas::eszak, Eltolas::eszakkelet, Eltolas::kelet, Eltolas::delkelet, Eltolas::del, Eltolas::delnyugat, Eltolas::nyugat, Eltolas::eszaknyugat};
-    for (int i = 0; i < 8; i++) {
-        Poz veg = kezdo + iranyok[i];
+    for (auto irany : iranyok) {
+        Poz veg = kezdo + irany;
         if (tabla.benne_van(veg) && (tabla.ures(veg) || tabla[veg]->get_szin() != szin))
             elerhetok.push_back(new NormalLepes(kezdo, veg));
     }
     if (sancolhat_kiraly_oldalon(kezdo, tabla))
-        elerhetok.push_back(new KiralynoOldaliSanc(kezdo));
+        elerhetok.push_back(new KiralyOldaliSanc(kezdo));
     if (sancolhat_kiralyno_oldalon(kezdo, tabla))
         elerhetok.push_back(new KiralynoOldaliSanc(kezdo));
 
@@ -161,25 +168,25 @@ Lepesek Kiraly::lepesek(const Poz& kezdo, Tabla& tabla) const {
 }
 
 bool Kiraly::sancolhat_kiraly_oldalon(Poz kezdo, Tabla &tabla) const {
-    std::vector<Poz> poziciok = { Poz(kezdo.get_sor(), 5), Poz(kezdo.get_sor(), 6)  };
-    Poz bastya_poz(kezdo.get_sor(), 7);
+    std::vector<Poz> poziciok = { Poz(kezdo.sor, 5), Poz(kezdo.sor, 6)  };
+    Poz bastya_poz(kezdo.sor, 7);
 
-    return !get_mozgott() && tabla.uresek(poziciok) && !tabla.ures(bastya_poz) && !tabla[bastya_poz]->get_mozgott();
+    return !mozgott && tabla.uresek(poziciok) && !tabla.ures(bastya_poz) && !tabla[bastya_poz]->mozgott;
 }
 
 bool Kiraly::sancolhat_kiralyno_oldalon(Poz kezdo, Tabla &tabla) const {
-    std::vector<Poz> poziciok = { Poz(kezdo.get_sor(), 1), Poz(kezdo.get_sor(), 2), Poz(kezdo.get_sor(), 3)  };
-    Poz bastya_poz(kezdo.get_sor(), 0);
+    std::vector<Poz> poziciok = { Poz(kezdo.sor, 1), Poz(kezdo.sor, 2), Poz(kezdo.sor, 3)  };
+    Poz bastya_poz(kezdo.sor, 0);
 
-    return !get_mozgott() && tabla.uresek(poziciok) && !tabla.ures(bastya_poz) && !tabla[bastya_poz]->get_mozgott();
+    return !mozgott && tabla.uresek(poziciok) && !tabla.ures(bastya_poz) && !tabla[bastya_poz]->mozgott;
 }
 
 bool Babu::uti_a_kiralyt(const Poz& poz, Tabla& tabla) const {
     Lepesek lehetseges_lepesek = lepesek(poz, tabla);
-    for (size_t i = 0; i < lehetseges_lepesek.size(); i++) {
-        Poz veg = lehetseges_lepesek[i]->veg;
+    for (auto lepes : lehetseges_lepesek) {
+        Poz veg = lepes->veg;
         if (tabla[veg] != nullptr && tabla[veg]->get_tipus() == kiraly) {
-                return true;
+            return true;
         }
     }
     return false;
@@ -187,8 +194,8 @@ bool Babu::uti_a_kiralyt(const Poz& poz, Tabla& tabla) const {
 
 bool Paraszt::uti_a_kiralyt(const Poz& poz, Tabla& tabla) const {
     Lepesek atlosan = atlos_lepesek(poz, tabla);
-    for (size_t i = 0; i < atlosan.size(); i++) {
-        Poz veg = atlosan[i]->veg;
+    for (auto lepes : atlosan) {
+        Poz veg = lepes->veg;
         if (tabla[veg] != nullptr && tabla[veg]->get_tipus() == kiraly) {
             return true;
         }

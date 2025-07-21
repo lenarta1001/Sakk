@@ -32,7 +32,7 @@ public:
 class DuplaLepes : public Lepes {
     Poz atugrott;
 public:
-    DuplaLepes(const Poz& k, const Poz& v) : Lepes(k, v), atugrott((k.get_sor() + v.get_sor()) / 2, k.get_oszlop()) {}
+    DuplaLepes(const Poz& k, const Poz& v) : Lepes(k, v), atugrott((k.sor + v.sor) / 2, k.oszlop) {}
     Lepes* copy() { return new DuplaLepes(kezdo, veg); }
     void elvegez(Tabla& tabla) const;
     bool parasztlepes_utes(Tabla& tabla) const;
@@ -55,7 +55,7 @@ class KiralyOldaliSanc : public Lepes {
     Poz bastya_veg;
     Eltolas irany;
 public:
-    KiralyOldaliSanc(const Poz& k) : Lepes(k, Poz(k.get_sor(), 6)), bastya_kezdo(k.get_sor(), 7), bastya_veg(k.get_sor(), 5), irany(Eltolas::kelet) {}
+    KiralyOldaliSanc(const Poz& k) : Lepes(k, Poz(k.sor, 6)), bastya_kezdo(k.sor, 7), bastya_veg(k.sor, 5), irany(Eltolas::kelet) {}
     Lepes* copy() { return new KiralyOldaliSanc(kezdo); }
     void elvegez(Tabla& tabla) const;
     bool ervenyes(Tabla& tabla) const;
@@ -68,7 +68,7 @@ class KiralynoOldaliSanc : public Lepes {
     Poz bastya_veg;
     Eltolas irany;
 public:
-    KiralynoOldaliSanc(const Poz& k) : Lepes(k, Poz(k.get_sor(), 2)), bastya_kezdo(k.get_sor(), 0), bastya_veg(k.get_sor(), 3), irany(Eltolas::nyugat) {}
+    KiralynoOldaliSanc(const Poz& k) : Lepes(k, Poz(k.sor, 2)), bastya_kezdo(k.sor, 0), bastya_veg(k.sor, 3), irany(Eltolas::nyugat) {}
     Lepes* copy() { return new KiralynoOldaliSanc(kezdo); }
     void elvegez(Tabla& tabla) const;
     bool ervenyes(Tabla& tabla) const;
@@ -79,7 +79,7 @@ public:
 class EnPassant : public Lepes {
     Poz leutott_poz;
 public:
-    EnPassant(const Poz& k, const Poz& v) : Lepes(k, v), leutott_poz(k.get_sor(), v.get_oszlop()) {}
+    EnPassant(const Poz& k, const Poz& v) : Lepes(k, v), leutott_poz(k.sor, v.oszlop) {}
     Lepes* copy() { return new EnPassant(kezdo, veg); }
     void elvegez(Tabla& tabla) const;
     bool parasztlepes_utes(Tabla& tabla) const;
@@ -89,14 +89,34 @@ public:
 class Lepesek : public std::vector<Lepes*> {
 public:
     Lepesek(size_t db = 0) : std::vector<Lepes*>(db) {}
+    Lepesek& operator=(const Lepesek& l) {
+        if (this != &l) {
+            for (auto& lepes : *this) {
+                delete lepes;
+            }
+
+            for (auto& lepes : l) {
+                push_back(lepes->copy());
+            }
+        }
+        return *this;
+    }
     Lepesek(const Lepesek& l) {
-        for (size_t i = 0; i < l.size(); i++) {
-            push_back(l[i]->copy());
+        for (auto& lepes : l) {
+            push_back(lepes->copy());
         }
     }
+
+    void clear() {
+        for (auto& lepes : *this) {
+            delete lepes;
+        }
+        std::vector<Lepes*>::clear();
+    }
+
     ~Lepesek() {
-        for (size_t i = 0; i < size(); i++) {
-            delete (*this)[i];
+        for (auto& lepes : *this) {
+                delete lepes;
         }
     }
 

@@ -26,15 +26,14 @@ enum BabuTipus {
 class Babu {
 protected:
     Szin szin;
-    bool mozgott;
     BabuTipus tipus;
 public:
+    bool mozgott;
     Babu(Szin sz, bool m = false, BabuTipus tipus = paraszt) : szin(sz), mozgott(m), tipus(tipus) {}
     virtual Lepesek lepesek(const Poz& kezdo, Tabla& tabla) const = 0;
-    virtual SDL_Texture* kep(SDL_Renderer* renderer) const = 0;
+    virtual std::string kep() const = 0;
     virtual Babu* copy() const = 0;
     Szin get_szin() const { return szin; }
-    bool get_mozgott() const { return mozgott; }
     BabuTipus get_tipus() const { return tipus; }
     virtual bool uti_a_kiralyt(const Poz& poz, Tabla& tabla) const;
     virtual char fen_char() const = 0;
@@ -53,9 +52,8 @@ public:
     Babu* copy() const { return new Paraszt(szin, mozgott); }
     bool uti_a_kiralyt(const Poz& poz, Tabla& tabla) const;
     char fen_char() const { return  szin == feher ? 'P' : 'p'; }
-    SDL_Texture* kep(SDL_Renderer* renderer) const {
-        SDL_Texture* kep = szin == feher ? IMG_LoadTexture(renderer, "white-pawn.png") : IMG_LoadTexture(renderer, "black-pawn.png");
-        return kep;
+    std::string kep() const {
+        return szin == feher ? "white-pawn.png" : "black-pawn.png";
     }
 };
 
@@ -66,9 +64,8 @@ public:
     Lepesek lepesek(const Poz& kezdo, Tabla& tabla) const;
     Babu* copy() const { return new Bastya(szin, mozgott); }
     char fen_char() const { return  szin == feher ? 'R' : 'r'; }
-    SDL_Texture* kep(SDL_Renderer* renderer) const {
-        SDL_Texture* kep = szin == feher ? IMG_LoadTexture(renderer, "white-rook.png") : IMG_LoadTexture(renderer, "black-rook.png");
-        return kep;
+    std::string kep() const {
+        return szin == feher ? "white-rook.png" : "black-rook.png";
     }
 };
 
@@ -78,9 +75,8 @@ public:
     Lepesek lepesek(const Poz& kezdo, Tabla& tabla) const;
     Babu* copy() const { return new Futo(szin, mozgott); }
     char fen_char() const { return  szin == feher ? 'B' : 'b'; }
-    SDL_Texture* kep(SDL_Renderer* renderer) const {
-        SDL_Texture* kep = szin == feher ? IMG_LoadTexture(renderer, "white-bishop.png") : IMG_LoadTexture(renderer, "black-bishop.png");
-        return kep;
+    std::string kep() const {
+        return szin == feher ? "white-bishop.png" : "black-bishop.png";
     }
 };
 
@@ -90,9 +86,8 @@ public:
     Lepesek lepesek(const Poz& kezdo, Tabla& tabla) const;
     Babu* copy() const { return new Huszar(szin, mozgott); }
     char fen_char() const { return  szin == feher ? 'N' : 'n'; }
-    SDL_Texture* kep(SDL_Renderer* renderer) const {
-        SDL_Texture* kep = szin == feher ? IMG_LoadTexture(renderer, "white-knight.png") : IMG_LoadTexture(renderer, "black-knight.png");
-        return kep;
+    std::string kep() const {
+        return szin == feher ? "white-knight.png" : "black-knight.png";
     }
 };
 
@@ -104,9 +99,8 @@ public:
     bool sancolhat_kiraly_oldalon(Poz kezdo, Tabla& tabla) const;
     bool sancolhat_kiralyno_oldalon(Poz kezdo, Tabla& tabla) const;
     char fen_char() const { return  szin == feher ? 'K' : 'k'; }
-    SDL_Texture* kep(SDL_Renderer* renderer) const {
-        SDL_Texture* kep = szin == feher ? IMG_LoadTexture(renderer, "white-king.png") : IMG_LoadTexture(renderer, "black-king.png");
-        return kep;
+    std::string kep() const {
+        return szin == feher ? "white-king.png" : "black-king.png";
     }
 };
 
@@ -116,9 +110,8 @@ public:
     Lepesek lepesek(const Poz& kezdo, Tabla& tabla) const;
     Babu* copy() const { return new Kiralyno(szin, mozgott); }
     char fen_char() const { return  szin == feher ? 'Q' : 'q'; }
-    SDL_Texture* kep(SDL_Renderer* renderer) const {
-        SDL_Texture* kep = szin == feher ? IMG_LoadTexture(renderer, "white-queen.png") : IMG_LoadTexture(renderer, "black-queen.png");
-        return kep;
+    std::string kep() const {
+        return szin == feher ? "white-queen.png" : "black-queen.png";
     }
 };
 #endif // BABU_H

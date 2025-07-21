@@ -6,12 +6,10 @@
 #include "eltolas.h"
 
 class Poz {
-    unsigned sor;
-    unsigned oszlop;
 public:
-    Poz(unsigned s = 9, unsigned o = 9) : sor(s), oszlop(o) {}
-    unsigned get_sor() const { return sor; }
-    unsigned get_oszlop() const { return oszlop; }
+    int sor;
+    int oszlop;
+    Poz(int s = -1, int o = -1) : sor(s), oszlop(o) {}
     Szin szin() { return (sor + oszlop) % 2 == 0 ? Szin::feher : Szin::fekete; }
     Poz operator+(const Eltolas& e) const;
     Poz& operator+=(const Eltolas& e);

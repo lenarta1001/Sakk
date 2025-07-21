@@ -6,8 +6,9 @@
 void NormalLepes::elvegez(Tabla &tabla) const {
     Babu* babu = tabla[kezdo];
     delete tabla[veg];
+    babu->mozgott = true;
     tabla[veg] = babu;
-    tabla[kezdo] = nullptr; // !!! mozgott = true;
+    tabla[kezdo] = nullptr;
 }
 
 bool NormalLepes::parasztlepes_utes(Tabla& tabla) const {
@@ -74,7 +75,7 @@ bool KiralyOldaliSanc::ervenyes(Tabla& tabla) const {
         mozgo_kiraly += irany;
     }
 
-    return false;
+    return true;
 }
 
 bool KiralyOldaliSanc::parasztlepes_utes(Tabla& tabla) const {
@@ -104,7 +105,7 @@ bool KiralynoOldaliSanc::ervenyes(Tabla& tabla) const {
         mozgo_kiraly += irany;
     }
 
-    return false;
+    return true;
 }
 
 bool KiralynoOldaliSanc::parasztlepes_utes(Tabla& tabla) const {

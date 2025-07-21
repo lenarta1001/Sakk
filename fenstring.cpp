@@ -64,8 +64,8 @@ void FenString::enpassant_jog_hozzafuzes(Tabla &tabla, const Jatekos& jatekos) {
         fenstring += std::to_string('-');
     } else {
         Poz atugrott = tabla.get_atugrott_pozicio(jatekos.ellenfel());
-        char oszlop = (char)atugrott.get_oszlop() + 'a';
-        int sor = 8 - atugrott.get_sor();
+        char oszlop = (char)atugrott.oszlop + 'a';
+        int sor = 8 - atugrott.sor;
         fenstring += std::to_string(oszlop) + std::to_string(sor);
     }
 }

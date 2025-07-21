@@ -32,7 +32,7 @@ Tabla& Tabla::operator=(const Tabla& tabla) {
 }
 
 Babu*& Tabla::operator[](const Poz& p) {
-    return tabla[p.get_sor()][p.get_oszlop()];
+    return tabla[p.sor][p.oszlop];
 }
 
 Babu* Tabla::operator()(unsigned s, unsigned o) const {
@@ -40,7 +40,7 @@ Babu* Tabla::operator()(unsigned s, unsigned o) const {
 }
 
 Babu* Tabla::operator[](const Poz& p) const {
-    return tabla[p.get_sor()][p.get_oszlop()];
+    return tabla[p.sor][p.oszlop];
 }
 
 Babu*& Tabla::operator()(unsigned s, unsigned o)  {
@@ -88,11 +88,11 @@ Poz &Tabla::get_atugrott_pozicio(const Jatekos &j)
 }
 
 bool Tabla::ures(const Poz& p) const {
-    return tabla[p.get_sor()][p.get_oszlop()] == nullptr;
+    return tabla[p.sor][p.oszlop] == nullptr;
 }
 
 bool Tabla::benne_van(const Poz& p) const {
-    return p.get_sor() >= 0 && p.get_sor() < 8 &&  p.get_oszlop() >= 0 && p.get_oszlop() < 8;
+    return p.sor >= 0 && p.sor < 8 &&  p.oszlop >= 0 && p.oszlop < 8;
 }
 
 std::vector<Poz> Tabla::babuk_pozicioja() const {
@@ -192,7 +192,7 @@ bool Tabla::kiralyoldali_sanc_jog(const Jatekos &j) const {
     if (ures(Poz(kezdosor, 4)) || ures(Poz(kezdosor, 7)))
         return false;
 
-    return !operator()(kezdosor, 4)->get_mozgott() && !operator()(kezdosor, 7)->get_mozgott();
+    return !operator()(kezdosor, 4)->mozgott && !operator()(kezdosor, 7)->mozgott;
 }
 
 bool Tabla::kiralynooldali_sanc_jog(const Jatekos &j) const {
@@ -200,12 +200,12 @@ bool Tabla::kiralynooldali_sanc_jog(const Jatekos &j) const {
     if (ures(Poz(kezdosor, 4)) || ures(Poz(kezdosor, 0)))
         return false;
 
-    return !operator()(kezdosor, 4)->get_mozgott() && !operator()(kezdosor, 0)->get_mozgott();
+    return !operator()(kezdosor, 4)->mozgott && !operator()(kezdosor, 0)->mozgott;
 }
 
 bool Tabla::enpassant_jog(const Jatekos &j) {
     Poz atugrott = get_atugrott_pozicio(j.ellenfel()); // !!!! Lehet mashogy kene
-    if (atugrott.get_oszlop() >= 9 && atugrott.get_sor() >= 9) {
+    if (atugrott.oszlop == -1 && atugrott.sor == -1) {
         return false;
     }
     Poz lehetseges_uto_poziciok[2];
