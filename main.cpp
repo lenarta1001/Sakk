@@ -6,10 +6,11 @@
 #include <iostream>
 
 #include "ablak.h"
+#include "tabla.h"
 
 int main(int argc, char *argv[]) {
     Ablak ablak;
-    ablak.tabla_rajzol();
+    ablak.jatek();
     ablak.esemenyre_var();
     
 

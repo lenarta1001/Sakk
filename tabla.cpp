@@ -5,16 +5,30 @@
 #include "szamolo.h"
 #include "eltolas.h"
 
-Tabla::Tabla() : tabla(8, std::vector<Babu*>(8, 0))  {
-    for (int i = 0; i < 8; i++)
-        for (int j = 0; j < 8; j++)
-            tabla[i][j] = nullptr;
-}
+Tabla::Tabla() : tabla(8, std::vector<Babu*>(8, nullptr))  {}
 
 Tabla::~Tabla() {
-    for (int i = 0; i < 8; i++)
-        for (int j = 0; j < 8; j++)
+    for (size_t i = 0; i < 8; i++)
+        for (size_t j = 0; j < 8; j++)
             delete tabla[i][j];
+}
+
+Tabla& Tabla::operator=(const Tabla& tabla) {
+    if (this != &tabla) {
+        for (size_t i = 0; i < 8; i++)
+            for (size_t j = 0; j < 8; j++)
+                delete this->tabla[i][j];
+        
+        for (size_t i = 0; i < 8; i++) {
+            for (size_t j = 0; j < 8; j++) {
+                if (!tabla.ures(Poz(i, j)))
+                    this->tabla[i][j] = tabla.tabla[i][j]->copy();
+                else
+                    this->tabla[i][j] = nullptr;
+            }
+        }  
+    }
+    return *this;
 }
 
 Babu*& Tabla::operator[](const Poz& p) {
@@ -33,8 +47,7 @@ Babu*& Tabla::operator()(unsigned s, unsigned o)  {
     return tabla[s][o];
 }
 
-Tabla Tabla::init()
-{
+Tabla Tabla::init() {
     Tabla tabla;
     tabla.tabla[0][0] = new Bastya(fekete);
     tabla.tabla[0][1] = new Huszar(fekete);
@@ -43,7 +56,7 @@ Tabla Tabla::init()
     tabla.tabla[0][4] = new Kiraly(fekete);
     tabla.tabla[0][5] = new Futo(fekete);
     tabla.tabla[0][6] = new Huszar(fekete);
-    tabla.tabla[0][7] = new Huszar(fekete);
+    tabla.tabla[0][7] = new Bastya(fekete);
 
     tabla.tabla[7][0] = new Bastya(feher);
     tabla.tabla[7][1] = new Huszar(feher);
@@ -52,7 +65,7 @@ Tabla Tabla::init()
     tabla.tabla[7][4] = new Kiraly(feher);
     tabla.tabla[7][5] = new Futo(feher);
     tabla.tabla[7][6] = new Huszar(feher);
-    tabla.tabla[7][7] = new Huszar(feher);
+    tabla.tabla[7][7] = new Bastya(feher);
 
     for (int i = 0; i < 8; i++) {
         tabla.tabla[1][i] = new Paraszt(fekete);
@@ -219,11 +232,11 @@ bool Tabla::enpassant_jog(const Jatekos &j) {
     return false;
 }
 
-Tabla::Tabla(const Tabla& t) : tabla(8, std::vector<Babu*>(8, 0)) {
+Tabla::Tabla(const Tabla& tabla) : tabla(8, std::vector<Babu*>(8, 0)) {
     for (size_t i = 0; i < 8; i++) {
-        for (int j = 0; j < 8; j++) {
-            if (!ures(Poz(i, j)))
-                this->tabla[i][j] = t.tabla[i][j]->copy();
+        for (size_t j = 0; j < 8; j++) {
+            if (!tabla.ures(Poz(i, j)))
+                this->tabla[i][j] = tabla.tabla[i][j]->copy();
             else
                 this->tabla[i][j] = nullptr;
         }

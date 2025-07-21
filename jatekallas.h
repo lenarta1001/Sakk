@@ -24,7 +24,7 @@ class JatekAllas {
     std::map<std::string, size_t> korabbi_fenstringek;
 public:
     bool vege;
-    JatekAllas(Jatekos j = feher, Tabla t = Tabla()) : akt_jatekos(j), tabla(t), otvenlepes_szabaly_szamlalo(0), vege(false) {
+    JatekAllas(Jatekos j, Tabla t) : akt_jatekos(j), tabla(t), otvenlepes_szabaly_szamlalo(0), vege(false) {
         fenstring = FenString(j, t).get_s();
         korabbi_fenstringek[fenstring] = 1;
     }

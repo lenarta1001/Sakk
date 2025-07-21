@@ -27,6 +27,11 @@ Ablak::Ablak() : jatek(feher, Tabla::init()) {
         std::cerr << "Renderer létrehozasi hiba: " << SDL_GetError() << std::endl;
         exit(1);
     }
+    tabla_rajzol();
+}
+
+void Ablak::tabla_rajzol() {
+    SDL_RenderClear(renderer);
 
     SDL_Texture *tabla_kep = IMG_LoadTexture(renderer, "board.png");
     if (tabla_kep == NULL) {
@@ -37,10 +42,7 @@ Ablak::Ablak() : jatek(feher, Tabla::init()) {
     SDL_Rect celterulet = { 0, 0, 784, 784 };
     SDL_RenderCopy(renderer, tabla_kep, NULL, &celterulet);
     SDL_DestroyTexture(tabla_kep);
-    SDL_RenderPresent(renderer);
-}
-
-void Ablak::tabla_rajzol() {
+    
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             if (!jatek.tabla.ures(Poz(i, j))) {
@@ -49,7 +51,7 @@ void Ablak::tabla_rajzol() {
                     std::cerr << "Kep betoltési hiba: " << IMG_GetError() << std::endl;
                     exit(1);
                 }
-                SDL_Rect celterulet = { 8 + 96*i, 8 + 96*j, 96, 96 };
+                SDL_Rect celterulet = { 8 + 96*j, 8 + 96*i, 96, 96 };
                 SDL_RenderCopy(renderer, babu_kep, NULL, &celterulet);
                 SDL_DestroyTexture(babu_kep);
             }

@@ -91,7 +91,7 @@ public:
     Babu* copy() const { return new Huszar(szin, mozgott); }
     char fen_char() const { return  szin == feher ? 'N' : 'n'; }
     SDL_Texture* kep(SDL_Renderer* renderer) const {
-        SDL_Texture* kep = szin == feher ? IMG_LoadTexture(renderer, "white-bishop.png") : IMG_LoadTexture(renderer, "black-bishop.png");
+        SDL_Texture* kep = szin == feher ? IMG_LoadTexture(renderer, "white-knight.png") : IMG_LoadTexture(renderer, "black-knight.png");
         return kep;
     }
 };

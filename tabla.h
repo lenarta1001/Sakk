@@ -19,6 +19,7 @@ class Tabla {
 public:
     Tabla();
     Tabla(const Tabla&);
+    Tabla& operator=(const Tabla& tabla);
     Babu* operator[](const Poz& p) const;
     Babu*& operator[](const Poz& p);
     Babu* operator() (unsigned s, unsigned o) const;
