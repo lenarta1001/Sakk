@@ -82,7 +82,7 @@ public:
 
 class Huszar : public Babu {
 public:
-    Huszar(Szin sz, bool m = false) : Babu(sz, m, futo) {}
+    Huszar(Szin sz, bool m = false) : Babu(sz, m, huszar) {}
     Lepesek lepesek(const Poz& kezdo, Tabla& tabla) const;
     Babu* copy() const { return new Huszar(szin, mozgott); }
     char fen_char() const { return  szin == feher ? 'N' : 'n'; }
@@ -93,7 +93,7 @@ public:
 
 class Kiraly : public Babu {
 public:
-    Kiraly(Szin sz, bool m = false) : Babu(sz, m, futo)  {}
+    Kiraly(Szin sz, bool m = false) : Babu(sz, m, kiraly)  {}
     Lepesek lepesek(const Poz& kezdo, Tabla& tabla) const;
     Babu* copy() const { return new Kiraly(szin, mozgott); }
     bool sancolhat_kiraly_oldalon(Poz kezdo, Tabla& tabla) const;
