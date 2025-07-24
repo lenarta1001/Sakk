@@ -55,18 +55,18 @@ Lepesek JatekAllas::osszes_ervenyes_lepes(const Jatekos &jatekos) {
 void JatekAllas::vege_ellenorzes() {
     if (osszes_ervenyes_lepes(akt_jatekos).empty()) {
         if (tabla.sakkban_van(akt_jatekos))
-            eredmeny = Eredmeny(akt_jatekos.ellenfel(), "sakkmatt");
+            eredmeny = Eredmeny(akt_jatekos.ellenfel(), akt_jatekos.ellenfel().nev() + "NYERT", "SAKKMATT - " + akt_jatekos.nev() + "NEM TUD TÖBB LEPEST TENNI." );
         else
-            eredmeny = Eredmeny(none, "patt");
+            eredmeny = Eredmeny(none, "DÖNTETLEN", "PATT");
         vege = true;
     } else if (tabla.elegtelen_anyag()) {
         vege = true;
-        eredmeny = Eredmeny(none, "elegtelen anyag");
+        eredmeny = Eredmeny(none, "DÖNTETLEN", "ELÉGTELEN ANYAG");
     } else if (otvenlepes_szabaly_szamlalo >= 100) {
         vege = true;
-        eredmeny = Eredmeny(none, "otvenlepeses-szabaly");
+        eredmeny = Eredmeny(none, "DÖNTETLEN", "ÖTVENLÉPÉSES SZABÁLY");
     } else if (korabbi_fenstringek[fenstring] >= 3) {
         vege = true;
-        eredmeny = Eredmeny(none, "haromszori allasismetles");
+        eredmeny = Eredmeny(none, "DÖNTETLEN", "HÁROMSZORI ÁLLÁSISMÉTLÉS");
     }
 }

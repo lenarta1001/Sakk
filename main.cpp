@@ -11,7 +11,9 @@
 int main(int argc, char *argv[]) {
     Ablak ablak;
     //ablak.jatek();
+    ablak.szunet_menu();
     ablak.esemenyre_var();
+    
     
 
     return 0;

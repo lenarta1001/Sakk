@@ -4,12 +4,12 @@
 #include "jatekos.h"
 #include <string>
 
-class Eredmeny {
+struct Eredmeny {
     Jatekos nyertes;
+    std::string eredmeny;
     std::string ok;
-public:
-    Eredmeny(Jatekos j, std::string o) : nyertes(j), ok(o) {}
-    Eredmeny() : nyertes(none), ok("") {}
+    Eredmeny(Jatekos j, std::string e, std::string o) : nyertes(j), eredmeny(e), ok(o) {}
+    Eredmeny() : nyertes(none), ok(" ") {}
 };
 
 #endif // EREDMENY_H

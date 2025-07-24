@@ -138,6 +138,11 @@ CMakeFiles/Sakk.dir/ablak.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/istream \
  C:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/vector \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/stl_vector.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/vector.tcc \
  C:/Users/Gabi/vcpkg/installed/x64-mingw-dynamic/include/SDL2/SDL.h \
  C:/Users/Gabi/vcpkg/installed/x64-mingw-dynamic/include/SDL2/SDL_main.h \
  C:/Users/Gabi/vcpkg/installed/x64-mingw-dynamic/include/SDL2/SDL_stdinc.h \
@@ -335,11 +340,6 @@ CMakeFiles/Sakk.dir/ablak.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_multimap.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/babu.h \
- C:/msys64/mingw64/include/c++/14.2.0/vector \
- C:/msys64/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
- C:/msys64/mingw64/include/c++/14.2.0/bits/stl_vector.h \
- C:/msys64/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
- C:/msys64/mingw64/include/c++/14.2.0/bits/vector.tcc \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/szin.h \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/poz.h \
  C:/Users/Gabi/OneDrive/Dokumentumok/Andris_BME/Sakk/eltolas.h \
