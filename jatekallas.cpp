@@ -55,7 +55,7 @@ Lepesek JatekAllas::osszes_ervenyes_lepes(const Jatekos &jatekos) {
 void JatekAllas::vege_ellenorzes() {
     if (osszes_ervenyes_lepes(akt_jatekos).empty()) {
         if (tabla.sakkban_van(akt_jatekos))
-            eredmeny = Eredmeny(akt_jatekos.ellenfel(), akt_jatekos.ellenfel().nev() + "NYERT", "SAKKMATT - " + akt_jatekos.nev() + "NEM TUD TÖBB LEPEST TENNI." );
+            eredmeny = Eredmeny(akt_jatekos.ellenfel(), akt_jatekos.ellenfel().nev() + " NYERT", "SAKKMATT" );
         else
             eredmeny = Eredmeny(none, "DÖNTETLEN", "PATT");
         vege = true;

@@ -85,7 +85,7 @@ public:
     void paraszt_atvaltozas_menu();
     void vege_menu();
     void szunet_menu();
-    void ujra();
+    void ujrainditas();
     ~Ablak();
 };
 
