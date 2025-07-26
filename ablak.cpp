@@ -12,7 +12,7 @@
 #include "jatekos.h"
 #include "szin.h"
 
-Ablak::Ablak() : menu_hatter(45, 32, 60, 200), menu_szegely(126, 66, 111, 200), gomb_szegely(79, 57, 95, 255), meret(768), menu(Menu::nincs), jatek(feher, Tabla::init()) {
+Ablak::Ablak() : menu_hatter(45, 32, 60, 200), menu_szegely(126, 66, 111, 200), gomb_szegely(79, 57, 95, 255), meret(768), jatek(feher, Tabla::init()) {
     if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
         std::cerr << "SDL_Init hiba: " << SDL_GetError() << std::endl;
     }
@@ -86,7 +86,7 @@ void Ablak::kiemeles_rajzol() {
     SDL_RenderPresent(renderer);
 }
 
-void Ablak::paraszt_atvaltozas_menu() {
+void Ablak::paraszt_atvaltozas_menu(const Poz &kezdo, const Poz &veg) {
     int szelesseg = meret / 1.8;
     int magassag = meret / 3.5;
     int x = (meret - szelesseg) / 2;
@@ -121,6 +121,25 @@ void Ablak::paraszt_atvaltozas_menu() {
     SDL_FreeSurface(felirat);
     SDL_DestroyTexture(felirat_t);
     SDL_RenderPresent(renderer);
+
+    Lepesek atvaltozasok;
+    atvaltozasok.push_back(new ParasztAtvaltozas(kezdo, veg, new Kiralyno(jatek.akt_jatekos.szin, true)));
+    atvaltozasok.push_back(new ParasztAtvaltozas(kezdo, veg, new Futo(jatek.akt_jatekos.szin, true)));
+    atvaltozasok.push_back(new ParasztAtvaltozas(kezdo, veg, new Bastya(jatek.akt_jatekos.szin, true)));
+    atvaltozasok.push_back(new ParasztAtvaltozas(kezdo, veg, new Huszar(jatek.akt_jatekos.szin, true)));
+
+    SDL_Event event;
+    while (SDL_WaitEvent(&event)) {
+        if (event.type == SDL_QUIT)
+            exit(1);
+        if (event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT) {
+            Poz poz = melyik_negyzet(event.button.x, event.button.y);
+            if (poz.sor == 4 && 2 <= poz.oszlop && poz.oszlop <= 5) {
+                jatek.lep(atvaltozasok[poz.oszlop - 2]);
+                break;
+            }
+        }
+    }
 }
 
 void Ablak::vege_menu() {
@@ -155,6 +174,18 @@ void Ablak::vege_menu() {
     SDL_DestroyTexture(ok_t);
     SDL_DestroyTexture(eredmeny_t);
     SDL_RenderPresent(renderer);
+
+    SDL_Event event;
+    while (SDL_WaitEvent(&event)) {
+        if (event.type == SDL_QUIT)
+            exit(1);
+        if (event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT)
+            if (kilepes.tartalmaz(event.button.x, event.button.y)) {
+                exit(1);
+            } else if (ujrakezdes.tartalmaz(event.button.x, event.button.y)) {
+                ujrainditas();
+            }
+    }
 }
 
 void Ablak::szunet_menu() {
@@ -183,38 +214,29 @@ void Ablak::szunet_menu() {
     SDL_FreeSurface(felirat);
     SDL_DestroyTexture(felirat_t);
     SDL_RenderPresent(renderer);
-}
 
-void Ablak::button_down_esemenykezelo(SDL_Event event) {
-    switch (menu) {
-        case Menu::nincs: {
-            Poz poz = melyik_negyzet(event.button.x, event.button.y);
-            if (kivalasztott.oszlop == -1 && kivalasztott.sor == -1) {
-                kezdo_kivalasztva(poz);
-            } else {
-                veg_kivalasztva(poz);
-            }
-            break;
-        }
-        case Menu::szunet: {
+    SDL_Event event;
+    while (SDL_WaitEvent(&event)) {
+        if (event.type == SDL_QUIT)
+            exit(1);
+        if (event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT)
             if (folytatas.tartalmaz(event.button.x, event.button.y)) {
                 tabla_rajzol();
-                menu = Menu::nincs;
+                break;
             } else if (ujrakezdes.tartalmaz(event.button.x, event.button.y)) {
                 ujrainditas();
-                menu = Menu::nincs;
+                break;
             }
-            break;
-        }
-        case Menu::vege: {
-            if (kilepes.tartalmaz(event.button.x, event.button.y)) {
-                fut = false;
-            } else if (ujrakezdes.tartalmaz(event.button.x, event.button.y)) {
-                ujrainditas();
-                menu = Menu::nincs;
-            }
-            break;
-        }
+
+    }
+}
+
+void Ablak::button_down(SDL_Event event) {
+    Poz poz = melyik_negyzet(event.button.x, event.button.y);
+    if (kivalasztott.oszlop == -1 && kivalasztott.sor == -1) {
+        kezdo_kivalasztva(poz);
+    } else {
+        veg_kivalasztva(poz);
     }
 }
 
@@ -222,13 +244,12 @@ Poz Ablak::melyik_negyzet(unsigned x, unsigned y) {
     return Poz(y / 96, x / 96);
 }
 
-void Ablak::esemenyre_var() {
+
+void Ablak::kezd() {
     bool fut = true;
     while (fut) {
         if (jatek.vege) {
-            menu = Menu::vege;
             vege_menu();
-            jatek.vege = false; 
         }
         SDL_Event event;
         SDL_WaitEvent(&event);
@@ -239,12 +260,11 @@ void Ablak::esemenyre_var() {
             case SDL_KEYDOWN:
                 if (event.key.keysym.sym == SDLK_ESCAPE) {
                     szunet_menu();
-                    menu = Menu::szunet;
                 }
                 break;
             case SDL_MOUSEBUTTONDOWN:
                 if (event.button.button == SDL_BUTTON_LEFT) {
-                    button_down_esemenykezelo(event);
+                    button_down(event);
                 }
                 break;
         }
@@ -265,8 +285,13 @@ void Ablak::veg_kivalasztva(const Poz& poz) {
     kivalasztott = Poz(-1, -1);
     for (auto& lepes : elerhetok) {
         if (lepes->veg == poz) {
-            jatek.lep(lepes);
-            break;
+            if (lepes->tipus == paraszt_atvaltozas) {
+                paraszt_atvaltozas_menu(lepes->kezdo, lepes->veg);
+                break;
+            } else {               
+                jatek.lep(lepes);
+                break;
+            }
         }
     }
     tabla_rajzol();
@@ -286,7 +311,9 @@ Ablak::~Ablak() {
 
 void Ablak::ujrainditas() {
     jatek.tabla = Tabla::init();
+    jatek.vege = false; 
     jatek.akt_jatekos = feher;
+    jatek.korabbi_fenstringek.clear();
     kivalasztott = Poz(-1, -1);
     elerhetok.clear();
     tabla_rajzol();

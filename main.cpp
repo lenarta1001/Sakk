@@ -10,8 +10,7 @@
 
 int main(int argc, char *argv[]) {
     Ablak ablak;
-    //ablak.jatek();
-    ablak.esemenyre_var();
+    ablak.kezd();
     
     
 

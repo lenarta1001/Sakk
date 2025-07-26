@@ -16,9 +16,6 @@ Lepesek Paraszt::elore_lepesek(const Poz &kezdo, Tabla &tabla) const {
     if (tabla.benne_van(kovetkezo) && tabla.ures(kovetkezo)) {
         if (kovetkezo.sor == 0 || kovetkezo.sor == 7) {
             elerhetok.push_back(new ParasztAtvaltozas(kezdo, kovetkezo, new Kiralyno(get_szin(), true)));
-            elerhetok.push_back(new ParasztAtvaltozas(kezdo, kovetkezo, new Futo(get_szin(), true)));
-            elerhetok.push_back(new ParasztAtvaltozas(kezdo, kovetkezo, new Huszar(get_szin(), true)));
-            elerhetok.push_back(new ParasztAtvaltozas(kezdo, kovetkezo, new Bastya(get_szin(), true)));
         } else {
             elerhetok.push_back(new NormalLepes(kezdo, kovetkezo));
             Poz kettos = kovetkezo + irany;
@@ -43,9 +40,6 @@ Lepesek Paraszt::atlos_lepesek(const Poz &kezdo, Tabla &tabla) const {
         } else if (tabla.benne_van(atlos) && !tabla.ures(atlos) && tabla[atlos]->get_szin() != szin) {
             if (atlos.sor == 0 || atlos.sor == 7) {
                 elerhetok.push_back(new ParasztAtvaltozas(kezdo, atlos, new Kiralyno(get_szin(), true)));
-                elerhetok.push_back(new ParasztAtvaltozas(kezdo, atlos, new Futo(get_szin(), true)));
-                elerhetok.push_back(new ParasztAtvaltozas(kezdo, atlos, new Huszar(get_szin(), true)));
-                elerhetok.push_back(new ParasztAtvaltozas(kezdo, atlos, new Bastya(get_szin(), true)));
             } else {
                 elerhetok.push_back(new NormalLepes(kezdo, atlos));
             }

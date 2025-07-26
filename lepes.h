@@ -8,11 +8,21 @@
 class Tabla;
 class Babu;
 
+enum LepesTipus {
+    normal,
+    dupla,
+    paraszt_atvaltozas,
+    kr_sanc,
+    krno_sanc,
+    en_passant,
+};
+
 class Lepes {
 public:
     Poz kezdo;
     Poz veg;
-    Lepes(const Poz& k, const Poz& v) : kezdo(k), veg(v) {}
+    LepesTipus tipus;
+    Lepes(const Poz& k, const Poz& v, LepesTipus tipus) : kezdo(k), veg(v), tipus(tipus) {}
     virtual Lepes* copy() = 0;
     virtual void elvegez(Tabla& tabla) const = 0;
     virtual bool ervenyes(Tabla& tabla) const;
@@ -22,7 +32,7 @@ public:
 
 class NormalLepes : public Lepes {
 public:
-    NormalLepes(const Poz& k, const Poz& v) : Lepes(k, v) {}
+    NormalLepes(const Poz& k, const Poz& v) : Lepes(k, v, normal) {}
     Lepes* copy() { return new NormalLepes(kezdo, veg); }
     void elvegez(Tabla& tabla) const;
     bool parasztlepes_utes(Tabla& tabla) const;
@@ -32,7 +42,7 @@ public:
 class DuplaLepes : public Lepes {
     Poz atugrott;
 public:
-    DuplaLepes(const Poz& k, const Poz& v) : Lepes(k, v), atugrott((k.sor + v.sor) / 2, k.oszlop) {}
+    DuplaLepes(const Poz& k, const Poz& v) : Lepes(k, v, dupla), atugrott((k.sor + v.sor) / 2, k.oszlop) {}
     Lepes* copy() { return new DuplaLepes(kezdo, veg); }
     void elvegez(Tabla& tabla) const;
     bool parasztlepes_utes(Tabla& tabla) const;
@@ -42,7 +52,7 @@ public:
 class ParasztAtvaltozas : public Lepes {
     Babu* mive;
 public:
-    ParasztAtvaltozas(const Poz& k, const Poz& v, Babu* mive) : Lepes(k, v), mive(mive) {}
+    ParasztAtvaltozas(const Poz& k, const Poz& v, Babu* mive) : Lepes(k, v, paraszt_atvaltozas), mive(mive) {}
     ParasztAtvaltozas(const ParasztAtvaltozas& p);
     Lepes* copy();
     void elvegez(Tabla& tabla) const;
@@ -55,7 +65,7 @@ class KiralyOldaliSanc : public Lepes {
     Poz bastya_veg;
     Eltolas irany;
 public:
-    KiralyOldaliSanc(const Poz& k) : Lepes(k, Poz(k.sor, 6)), bastya_kezdo(k.sor, 7), bastya_veg(k.sor, 5), irany(Eltolas::kelet) {}
+    KiralyOldaliSanc(const Poz& k) : Lepes(k, Poz(k.sor, 6), kr_sanc), bastya_kezdo(k.sor, 7), bastya_veg(k.sor, 5), irany(Eltolas::kelet) {}
     Lepes* copy() { return new KiralyOldaliSanc(kezdo); }
     void elvegez(Tabla& tabla) const;
     bool ervenyes(Tabla& tabla) const;
@@ -68,7 +78,7 @@ class KiralynoOldaliSanc : public Lepes {
     Poz bastya_veg;
     Eltolas irany;
 public:
-    KiralynoOldaliSanc(const Poz& k) : Lepes(k, Poz(k.sor, 2)), bastya_kezdo(k.sor, 0), bastya_veg(k.sor, 3), irany(Eltolas::nyugat) {}
+    KiralynoOldaliSanc(const Poz& k) : Lepes(k, Poz(k.sor, 2), krno_sanc), bastya_kezdo(k.sor, 0), bastya_veg(k.sor, 3), irany(Eltolas::nyugat) {}
     Lepes* copy() { return new KiralynoOldaliSanc(kezdo); }
     void elvegez(Tabla& tabla) const;
     bool ervenyes(Tabla& tabla) const;
@@ -79,7 +89,7 @@ public:
 class EnPassant : public Lepes {
     Poz leutott_poz;
 public:
-    EnPassant(const Poz& k, const Poz& v) : Lepes(k, v), leutott_poz(k.sor, v.oszlop) {}
+    EnPassant(const Poz& k, const Poz& v) : Lepes(k, v, en_passant), leutott_poz(k.sor, v.oszlop) {}
     Lepes* copy() { return new EnPassant(kezdo, veg); }
     void elvegez(Tabla& tabla) const;
     bool parasztlepes_utes(Tabla& tabla) const;

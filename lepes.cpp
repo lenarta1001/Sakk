@@ -39,13 +39,14 @@ bool ParasztAtvaltozas::parasztlepes_utes(Tabla& tabla) const {
 void ParasztAtvaltozas::elvegez(Tabla& tabla) const {
     delete tabla[veg];
     tabla[veg] = mive->copy();
+    tabla[veg]->mozgott = true;
     tabla[kezdo] = nullptr;
 }
 
-ParasztAtvaltozas::ParasztAtvaltozas(const ParasztAtvaltozas& p) : Lepes(p.kezdo, p.veg), mive(p.mive->copy()) { }
+ParasztAtvaltozas::ParasztAtvaltozas(const ParasztAtvaltozas& p) : Lepes(p.kezdo, p.veg, paraszt_atvaltozas), mive(p.mive->copy()) { }
 
 Lepes* ParasztAtvaltozas::copy() {
-    return new ParasztAtvaltozas(kezdo, veg, mive->copy());
+    return mive == nullptr ? new ParasztAtvaltozas(kezdo, veg, nullptr) : new ParasztAtvaltozas(kezdo, veg, mive->copy());
 }
 
 ParasztAtvaltozas::~ParasztAtvaltozas() {

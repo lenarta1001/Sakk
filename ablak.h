@@ -67,22 +67,20 @@ class Ablak {
     Gomb kilepes;
     Gomb folytatas;
     int meret;
-
     JatekAllas jatek;
-    Menu menu;
     Poz kivalasztott;
     Lepesek elerhetok;
 public:
     Ablak();
     void tabla_rajzol();
     SDL_Texture* betolt_kep(const std::string& fajlnev);
-    void esemenyre_var();
+    void kezd();
     void kiemeles_rajzol(); 
-    void button_down_esemenykezelo(SDL_Event event);
+    void button_down(SDL_Event event);
     void kezdo_kivalasztva(const Poz& p);
     void veg_kivalasztva(const Poz& p);
     Poz melyik_negyzet(unsigned x, unsigned y);
-    void paraszt_atvaltozas_menu();
+    void paraszt_atvaltozas_menu(const Poz& kezdo, const Poz& veg);
     void vege_menu();
     void szunet_menu();
     void ujrainditas();
